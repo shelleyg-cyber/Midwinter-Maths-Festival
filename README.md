@@ -40,9 +40,10 @@ The site is configured to publish to GitHub Pages via `.github/workflows/nextjs.
 which builds a static export (`out/`) on every push to the working branch.
 
 Because a project Pages site is served from a sub-folder
-(`https://<user>.github.io/midwinter-maths-festival/`), `next.config.mjs` sets a
-`basePath` of `/midwinter-maths-festival` in production, and all image paths are
-prefixed accordingly. If the repository is ever renamed, update that value (or set
+(`https://<user>.github.io/Midwinter-Maths-Festival/`), `next.config.mjs` sets a
+`basePath` of `/Midwinter-Maths-Festival` in production, and all image paths are
+prefixed accordingly. GitHub Pages paths are case-sensitive, so this must match the
+repository name exactly. If the repository is ever renamed, update that value (or set
 `NEXT_PUBLIC_BASE_PATH`). To host at a root domain instead (e.g. Vercel), set
 `NEXT_PUBLIC_BASE_PATH=""`.
 

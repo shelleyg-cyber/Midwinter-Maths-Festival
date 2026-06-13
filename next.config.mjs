@@ -5,9 +5,11 @@
 // production. Locally (next dev) it stays at the root.
 // Override with NEXT_PUBLIC_BASE_PATH if the repo is renamed or the
 // site is hosted somewhere that serves from the root (e.g. Vercel → "").
+// NB: GitHub Pages paths are case-sensitive — this must match the repository
+// name exactly (Midwinter-Maths-Festival).
 const basePath =
   process.env.NEXT_PUBLIC_BASE_PATH ??
-  (process.env.NODE_ENV === 'production' ? '/midwinter-maths-festival' : '');
+  (process.env.NODE_ENV === 'production' ? '/Midwinter-Maths-Festival' : '');
 
 const nextConfig = {
   output: 'export', // static site for GitHub Pages

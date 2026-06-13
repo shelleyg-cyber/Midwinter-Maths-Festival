@@ -6,7 +6,7 @@ import type { ReactNode } from 'react';
 // site is served from a sub-folder (GitHub Pages). Empty during local dev.
 export const BASE_PATH =
   process.env.NEXT_PUBLIC_BASE_PATH ??
-  (process.env.NODE_ENV === 'production' ? '/midwinter-maths-festival' : '');
+  (process.env.NODE_ENV === 'production' ? '/Midwinter-Maths-Festival' : '');
 
 export const ASSETS = `${BASE_PATH}/assets/`;
 
