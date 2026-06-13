@@ -41,6 +41,7 @@ export default function MapButtons() {
             style={{ left: `${d.mapPos.left}%`, top: `${d.mapPos.top}%`, '--accent': d.accent } as React.CSSProperties}
             onClick={() => go(d.slug)}
             aria-label={d.name}
+            title={d.name}
           >
             {usePin ? (
               <img
@@ -53,7 +54,9 @@ export default function MapButtons() {
             ) : (
               <span className="dot" aria-hidden="true"></span>
             )}
-            <span className="map-btn-label">{d.name}</span>
+            {/* Names are hidden on the map (pins are enough); shown only as a
+                hover tooltip via title, and as a label in the fallback pill. */}
+            {!usePin && <span className="map-btn-label">{d.name}</span>}
             {visited.includes(d.slug) && <span className="tick" aria-label="visited">✓</span>}
           </button>
         );
