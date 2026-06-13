@@ -62,4 +62,8 @@ public/assets/                  map artwork + activity images from the planning 
   image is the placeholder repeated.
 - **Southern Africa**: mbira audio clip (~47 s).
 - **South Asia**: confirm the rangoli design matching the "6 rotations / 12 lines" answer.
-- **Rail illustrations**: each destination page has a placeholder slot for a poster-style illustration.
+- **Title-banner artwork**: five sepia engravings (Australia, America, South Asia, Middle East/North
+  Africa, Europe) are wired up but the image files still need to be added — see
+  `public/assets/banners/README.md` for the exact filenames. Southeast Asia, East/Central Africa and
+  Southern Africa have no artwork yet and fall back to the plain title block with an illustration
+  placeholder.

@@ -582,6 +582,40 @@ button {
 .rail .btn-back {
   width: fit-content;
 }
+.rail-banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 4 / 5;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background-color: var(--card);
+  background-size: cover;
+  background-position: center top;
+}
+.rail-banner .dest-num {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  margin: 0;
+  box-shadow: 0 2px 6px rgba(59, 50, 40, 0.25);
+}
+.rail-banner-text {
+  margin-top: auto;
+  padding: 56px 18px 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(245, 241, 230, 0) 0%,
+    rgba(245, 241, 230, 0.88) 42%,
+    rgba(245, 241, 230, 0.97) 100%
+  );
+}
+.rail-banner h1 {
+  font-size: 2.2em;
+  color: var(--green);
+}
 .rail-illus {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -627,6 +661,10 @@ button {
 @media (max-width: 1180px) {
   .rail-challenges {
     grid-template-columns: 1fr;
+  }
+  .rail-banner {
+    aspect-ratio: 16 / 9;
+    max-height: 380px;
   }
   .dest-rail {
     grid-template-columns: 1fr;

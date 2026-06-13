@@ -24,12 +24,27 @@ export default async function DestinationPage({ params }: { params: Promise<{ sl
     <div className="dest dest-rail" style={{ '--accent': d.accent } as React.CSSProperties}>
       <aside className="rail">
         <Link href="/" className="btn btn-back">← Back to map</Link>
-        <span className="dest-num">Destination {d.num}</span>
-        <h1>{d.name}</h1>
-        <p className="dest-sub">{d.subtitle}</p>
-        <div className="rail-illus" role="img" aria-label="Illustration placeholder">
-          poster-style illustration<br />to be added
-        </div>
+        {d.banner ? (
+          <header
+            className="rail-banner"
+            style={{ backgroundImage: `url(${ASSETS}banners/${d.banner})` }}
+          >
+            <span className="dest-num">Destination {d.num}</span>
+            <div className="rail-banner-text">
+              <h1>{d.name}</h1>
+              <p className="dest-sub">{d.subtitle}</p>
+            </div>
+          </header>
+        ) : (
+          <>
+            <span className="dest-num">Destination {d.num}</span>
+            <h1>{d.name}</h1>
+            <p className="dest-sub">{d.subtitle}</p>
+            <div className="rail-illus" role="img" aria-label="Illustration placeholder">
+              poster-style illustration<br />to be added
+            </div>
+          </>
+        )}
         <div className="rail-dyk">
           <SectionLabel>Did you know?</SectionLabel>
           <p>{d.didYouKnow}</p>

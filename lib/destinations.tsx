@@ -53,6 +53,7 @@ export type Destination = {
   accent: string;
   mapPos: { left: number; top: number };
   video: { id?: string; driveId?: string; title?: string; note?: string };
+  banner?: string; // engraving artwork behind the title banner — public/assets/banners/
   image?: string;
   imageAlt?: string;
   didYouKnow: string;
@@ -70,6 +71,7 @@ export const destinations: Destination[] = [
     accent: '#A3879B',
     mapPos: { left: 86, top: 79 },
     video: { id: 'fv30IyZTwX4', title: 'Kaurna for Kids — numbers' },
+    banner: 'australia.png',
     image: 'au-animal-tracks.png',
     imageAlt: 'Kangaroo tracks in red sand',
     didYouKnow:
@@ -112,6 +114,7 @@ export const destinations: Destination[] = [
     accent: '#5E94B8',
     mapPos: { left: 18, top: 38 },
     video: { note: 'Video to be added — placeholder for now.' },
+    banner: 'america.png',
     didYouKnow:
       'Buying milk, filling up a car and checking the weather can all use different units in America. Many everyday measurements use the imperial system: length in inches and feet, long distances in miles, capacity in ounces and gallons, mass in pounds and temperature in degrees Fahrenheit.',
     outstanding: ['Video to be supplied later.'],
@@ -154,6 +157,7 @@ export const destinations: Destination[] = [
     accent: '#A8A060',
     mapPos: { left: 68, top: 48 },
     video: { id: 'sGNGwH9UJZI', title: 'Big rangoli at mall — Diwali' },
+    banner: 'south-asia.png',
     image: 'sa-rangoli.png',
     imageAlt: 'A colourful rangoli pattern on the ground',
     didYouKnow:
@@ -335,6 +339,7 @@ export const destinations: Destination[] = [
     accent: '#C09A62',
     mapPos: { left: 51, top: 41 },
     video: { id: 'h0x8qEIt7Ro', title: 'Urdu Numbers 1–10 Sing-Along' },
+    banner: 'middle-east-north-africa.png',
     didYouKnow:
       'Long ago, people used many different ways to record quantities and solve problems. Mathematical ideas about place value travelled between regions — including India and the Middle East — and helped shape the number system many people use today.',
     challenges: [
@@ -412,6 +417,7 @@ export const destinations: Destination[] = [
     accent: '#C4849C',
     mapPos: { left: 49, top: 25 },
     video: { driveId: '1ppPNNEKm10rySYViMjXcqnaRBivMzn6N', title: 'Königsberg bridges' },
+    banner: 'europe.png',
     image: 'eu-konigsberg-map.png',
     imageAlt: 'Historic map of Königsberg with its seven bridges marked',
     didYouKnow:
