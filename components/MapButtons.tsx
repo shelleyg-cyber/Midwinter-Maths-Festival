@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { destinations } from '@/lib/destinations';
+import { destinations, ASSETS } from '@/lib/destinations';
 
 const VISITED_KEY = 'maw_visited';
 
@@ -45,7 +45,7 @@ export default function MapButtons() {
             {usePin ? (
               <img
                 className="map-pin-img"
-                src={`/assets/pins/pin-${d.slug}.png`}
+                src={`${ASSETS}pins/pin-${d.slug}.png`}
                 alt=""
                 aria-hidden="true"
                 onError={() => setNoPin((m) => ({ ...m, [d.slug]: true }))}

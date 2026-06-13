@@ -34,6 +34,21 @@ npm run build    # production build (all 8 destination pages statically generate
 npm start        # serve the production build
 ```
 
+## Deploying to GitHub Pages
+
+The site is configured to publish to GitHub Pages via `.github/workflows/nextjs.yml`,
+which builds a static export (`out/`) on every push to the working branch.
+
+Because a project Pages site is served from a sub-folder
+(`https://<user>.github.io/midwinter-maths-festival/`), `next.config.mjs` sets a
+`basePath` of `/midwinter-maths-festival` in production, and all image paths are
+prefixed accordingly. If the repository is ever renamed, update that value (or set
+`NEXT_PUBLIC_BASE_PATH`). To host at a root domain instead (e.g. Vercel), set
+`NEXT_PUBLIC_BASE_PATH=""`.
+
+One-time setup: in the repository's **Settings → Pages**, set **Source** to
+**GitHub Actions**.
+
 ## Project structure
 
 ```

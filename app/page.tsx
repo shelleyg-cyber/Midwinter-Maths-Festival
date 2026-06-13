@@ -1,4 +1,5 @@
 import MapButtons from '@/components/MapButtons';
+import { ASSETS } from '@/lib/destinations';
 
 export default function MapPage() {
   return (
@@ -6,7 +7,7 @@ export default function MapPage() {
       <div className="map-box">
         <img
           className="map-art"
-          src="/assets/world-map.png"
+          src={`${ASSETS}world-map.png`}
           alt="Watercolour world map — 2026 Midwinter Maths Festival"
         />
         <MapButtons />
