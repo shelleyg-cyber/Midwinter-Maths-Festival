@@ -1,28 +1,64 @@
-# Maths Around Our World — Midwinter Maths Festival
+# Maths Around Our World — 2026 Midwinter Maths Festival
 
-An interactive, single-page web prototype for the **Midwinter Maths Festival**. Students take a "journey around the world", exploring real-world maths at four stations and collecting a passport stamp at each one by answering a challenge question.
+A desktop-first web experience for teachers to drive in class (projector / interactive whiteboard): a clickable
+watercolour world map linking to eight regional destination pages, each with a short video, a "Did you know?"
+fact, and differentiated Lower/Upper Primary maths challenges with hint and reveal-answer toggles.
 
-## The stations
+Implemented from the Claude Design handoff bundle (*Maths Around Our World — Prototype.html* and the companion
+build spec), with the design decisions locked in during the design sessions:
 
-| # | Station | Maths focus | Interactive activity |
-|---|---------|-------------|----------------------|
-| 1 | Antarctica ❄️ | Rotational symmetry | Draw your own six-fold symmetric snowflake on a canvas |
-| 2 | Fields of Europe 🌻 | Fibonacci sequence & the golden angle | Grow a sunflower seed spiral with a slider |
-| 3 | Cities of the World 🕰️ | Time zones, angles and division | Live world clocks comparing Melbourne, Tokyo, London and New York |
-| 4 | The Alhambra, Spain 🔷 | Tessellations and interior angles | Build tilings from triangles, squares, hexagons — and see why pentagons fail |
+- **Journey rail** destination layout — sticky info rail (title, fact, illustration) at left, media + challenges at right
+- **Merriweather** for headings and body
+- **Rise-and-fade** route transitions (reduced-motion safe)
+- **Ticket-style** buttons and rough-stamp heading banners, "earthy atlas" palette
 
-A sticky **Maths Passport** bar tracks progress; earning all four stamps completes the journey.
+## The eight destinations
 
-## Running it
+| # | Destination | Maths focus |
+|---|-------------|-------------|
+| 1 | Australia | Kaurna numbers, animal tracks, symmetry & rotation |
+| 2 | America | Metric → imperial measurement |
+| 3 | South Asia | Rangoli patterns & lines of symmetry |
+| 4 | Southeast Asia | Bánh Chưng recipe scaling (doubling) |
+| 5 | East & Central Africa | The Ishango Bone prime-number mystery |
+| 6 | Southern Africa | Mbira rhythm & clapping patterns |
+| 7 | Middle East & North Africa | Urdu / Persian-Arabic numerals mystery message |
+| 8 | Europe | Königsberg bridges — the puzzle that created graph theory |
 
-No build step or server is required — it's a single self-contained HTML file:
+## Running
 
-1. Open `index.html` in any modern browser, or
-2. Serve the folder, e.g. `python3 -m http.server` and visit `http://localhost:8000`.
+```bash
+npm install
+npm run dev      # development — http://localhost:3000
+npm run build    # production build (all 8 destination pages statically generated)
+npm start        # serve the production build
+```
 
-## Notes
+## Project structure
 
-- Plain HTML/CSS/JavaScript, no dependencies.
-- Touch input is supported for the drawing activity (works on tablets/iPads).
-- Respects `prefers-reduced-motion` (disables the snowfall and scroll animations).
-- Australian English, with Melbourne as the "home" time zone.
+```
+app/
+├── layout.tsx                  Merriweather via next/font, metadata
+├── globals.css                 design tokens + full stylesheet from the design handoff
+├── template.tsx                rise-and-fade route transition (re-runs per navigation)
+├── page.tsx                    landing — clickable world map
+└── destinations/[slug]/page.tsx  Journey-rail destination template (SSG ×8)
+components/
+├── MapButtons.tsx              map pills + visited stamps (sessionStorage)
+├── ChallengeCard.tsx           hint/reveal toggles, passport stamp, handprint option grid
+├── VideoSlot.tsx               YouTube embed or labelled placeholder
+└── SectionLabel.tsx
+lib/destinations.tsx            all 8 destinations — single source of truth for content
+public/assets/                  map artwork + activity images from the planning document
+```
+
+## Outstanding assets (flagged in-app on each affected page)
+
+- **Videos** for America, South Asia, East/Central Africa, Southern Africa, Middle East/North Africa
+  (titles known, URLs to be supplied) and Europe (currently a Google Drive link — re-host or open share
+  permissions). Add the YouTube ID to the destination's `video` field in `lib/destinations.tsx`.
+- **Australia**: four distinct handprint images (Kuma / Purlaityi / Marnkutyi / Yarapurla) — the current
+  image is the placeholder repeated.
+- **Southern Africa**: mbira audio clip (~47 s).
+- **South Asia**: confirm the rangoli design matching the "6 rotations / 12 lines" answer.
+- **Rail illustrations**: each destination page has a placeholder slot for a poster-style illustration.
