@@ -54,9 +54,10 @@ public/assets/                  map artwork + activity images from the planning 
 
 ## Outstanding assets (flagged in-app on each affected page)
 
-- **Videos** for America, South Asia, East/Central Africa, Southern Africa, Middle East/North Africa
-  (titles known, URLs to be supplied) and Europe (currently a Google Drive link — re-host or open share
-  permissions). Add the YouTube ID to the destination's `video` field in `lib/destinations.tsx`.
+- **America video** — still to be supplied. Add the YouTube ID to the destination's `video` field in
+  `lib/destinations.tsx`.
+- **Europe video** embeds from Google Drive — sharing must stay "Anyone with the link → Viewer" or it
+  won't play in class (re-hosting on YouTube unlisted is more reliable).
 - **Australia**: four distinct handprint images (Kuma / Purlaityi / Marnkutyi / Yarapurla) — the current
   image is the placeholder repeated.
 - **Southern Africa**: mbira audio clip (~47 s).

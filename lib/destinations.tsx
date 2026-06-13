@@ -52,7 +52,7 @@ export type Destination = {
   hook: string;
   accent: string;
   mapPos: { left: number; top: number };
-  video: { id?: string; title?: string; note?: string };
+  video: { id?: string; driveId?: string; title?: string; note?: string };
   image?: string;
   imageAlt?: string;
   didYouKnow: string;
@@ -153,12 +153,12 @@ export const destinations: Destination[] = [
     hook: 'Rangoli patterns and lines of symmetry',
     accent: '#A8A060',
     mapPos: { left: 68, top: 48 },
-    video: { note: '“big rangoli at mall | Diwali 2023” — link to be added.' },
+    video: { id: 'sGNGwH9UJZI', title: 'Big rangoli at mall — Diwali' },
     image: 'sa-rangoli.png',
     imageAlt: 'A colourful rangoli pattern on the ground',
     didYouKnow:
       'Rangoli patterns are decorative patterns often created for festivals and celebrations. They can include reflection symmetry, rotational symmetry, repeated shapes and colour patterns.',
-    outstanding: ['Video link to be added.', 'Chosen rangoli pattern to confirm (answer assumes 6 rotations / 12 lines).'],
+    outstanding: ['Chosen rangoli pattern to confirm (answer assumes 6 rotations / 12 lines).'],
     challenges: [
       {
         level: 'Lower primary',
@@ -247,12 +247,11 @@ export const destinations: Destination[] = [
     hook: 'The Ishango Bone number mystery',
     accent: '#6CA987',
     mapPos: { left: 56, top: 58 },
-    video: { note: '“This 25,000-Year-Old Bone Changes Everything…” — link to be added.' },
+    video: { id: 'oUPggWB5Efg', title: 'The Ishango Bone' },
     image: 'af-ishango-bone.png',
     imageAlt: 'The Ishango Bone, carved with tally notches',
     didYouKnow:
       'The Ishango Bone was found near the Semliki River in what is now the Democratic Republic of Congo. It contains groups of tally-like notches and is often discussed as an early mathematical object — the notch groups 11, 13, 17 and 19 hide an ancient number mystery.',
-    outstanding: ['Video link to be added.'],
     challenges: [
       {
         level: 'Lower primary',
@@ -298,10 +297,10 @@ export const destinations: Destination[] = [
     hook: 'Mbira rhythm and clapping patterns from Zimbabwe',
     accent: '#74955F',
     mapPos: { left: 57, top: 74 },
-    video: { note: '“Tarisiro #mbira” video + mbira audio clip (47 s) to be added.' },
+    video: { id: 'UJvOXxaJji4', title: 'Tarisiro — mbira' },
     didYouKnow:
       'The mbira is a thumb piano strongly associated with Zimbabwean music traditions. Rhythm gives us a concrete way to experience repeating patterns, cycles, counting and prediction.',
-    outstanding: ['Video link to be added.', 'Mbira audio clip (freesound_community-mbira-73623.mp3, ~47 s) to be uploaded.'],
+    outstanding: ['Mbira audio clip (freesound_community-mbira-73623.mp3, ~47 s) to be uploaded.'],
     challenges: [
       {
         level: 'Lower primary',
@@ -335,10 +334,9 @@ export const destinations: Destination[] = [
     hook: 'Urdu / Persian-Arabic numerals mystery message',
     accent: '#C09A62',
     mapPos: { left: 51, top: 41 },
-    video: { note: '“Urdu Numbers 1–10 Sing-Along” — link to be added.' },
+    video: { id: 'h0x8qEIt7Ro', title: 'Urdu Numbers 1–10 Sing-Along' },
     didYouKnow:
       'Long ago, people used many different ways to record quantities and solve problems. Mathematical ideas about place value travelled between regions — including India and the Middle East — and helped shape the number system many people use today.',
-    outstanding: ['Video link to be added.'],
     challenges: [
       {
         level: 'Lower primary',
@@ -413,12 +411,12 @@ export const destinations: Destination[] = [
     hook: 'Bridge and route puzzle inspired by Euler',
     accent: '#C4849C',
     mapPos: { left: 49, top: 25 },
-    video: { note: 'Video on Google Drive — needs share permissions or re-hosting.' },
+    video: { driveId: '1ppPNNEKm10rySYViMjXcqnaRBivMzn6N', title: 'Königsberg bridges' },
     image: 'eu-konigsberg-map.png',
     imageAlt: 'Historic map of Königsberg with its seven bridges marked',
     didYouKnow:
       'Germany is famous for bridge designs that changed the world of maths and engineering. German cities and engineers invented entirely new branches of mathematics and created formulas used to build modern bridges today.',
-    outstanding: ['Video is a Google Drive link — open permissions or re-host.'],
+    outstanding: ['Video embeds from Google Drive — sharing must stay “Anyone with the link → Viewer” or it won’t play in class.'],
     challenges: [
       {
         level: 'Lower primary',
