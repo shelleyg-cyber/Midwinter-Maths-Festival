@@ -191,6 +191,7 @@ export const destinations: Destination[] = [
     accent: '#5FA89A',
     mapPos: { left: 77, top: 57 },
     video: { id: '7CTT_33b3Ug', title: 'Making Bánh Chưng' },
+    banner: 'southeast-asia.png',
     didYouKnow:
       'During Lunar New Year, many Vietnamese families make Bánh Chưng — square rice cakes. This activity uses a recipe to practise reading numbers, doubling quantities and converting grams to kilograms.',
     challenges: [
@@ -252,6 +253,7 @@ export const destinations: Destination[] = [
     accent: '#6CA987',
     mapPos: { left: 56, top: 58 },
     video: { id: 'oUPggWB5Efg', title: 'The Ishango Bone' },
+    banner: 'east-central-africa.png',
     image: 'af-ishango-bone.png',
     imageAlt: 'The Ishango Bone, carved with tally notches',
     didYouKnow:
@@ -302,6 +304,7 @@ export const destinations: Destination[] = [
     accent: '#74955F',
     mapPos: { left: 57, top: 74 },
     video: { id: 'UJvOXxaJji4', title: 'Tarisiro — mbira' },
+    banner: 'southern-africa.png',
     didYouKnow:
       'The mbira is a thumb piano strongly associated with Zimbabwean music traditions. Rhythm gives us a concrete way to experience repeating patterns, cycles, counting and prediction.',
     outstanding: ['Mbira audio clip (freesound_community-mbira-73623.mp3, ~47 s) to be uploaded.'],
