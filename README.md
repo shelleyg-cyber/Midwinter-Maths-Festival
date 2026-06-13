@@ -62,6 +62,10 @@ public/assets/                  map artwork + activity images from the planning 
   image is the placeholder repeated.
 - **Southern Africa**: mbira audio clip (~47 s).
 - **South Asia**: confirm the rangoli design matching the "6 rotations / 12 lines" answer.
+- **Map pin artwork**: the landing-page pins are wired to use teardrop marker images
+  (`public/assets/pins/pin-<slug>.png`, transparent PNGs) — see the README in that folder for the
+  filename-to-destination mapping. Any pin whose file is missing falls back to the original
+  parchment-ticket pill, so the map keeps working until all eight are uploaded.
 - **Title-banner artwork**: all eight destinations are wired for a sepia engraving behind the title,
   but the image files still need to be uploaded to `public/assets/banners/` — see the README in that
   folder for the exact filenames. Pages show a plain parchment banner until their file is added.
