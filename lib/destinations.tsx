@@ -88,13 +88,11 @@ export const destinations: Destination[] = [
         level: 'Lower primary',
         body: (
           <p>
-            Watch the Kaurna for Kids numbers video. Match number words to numerals 1–10, then count sets of
-            animal tracks or stone groups. Here are <strong>3 kangaroo tracks</strong> — count the number of hops
-            using Kaurna language.
+            Count how many <strong>sets of kangaroo prints</strong> you see. What is this number in Kaurna?
           </p>
         ),
-        hint: 'Listen for the first three numbers in the video and say them out loud as you point to each hop.',
-        answer: <p><strong>Marnkutyi</strong> — three hops, counted in Kaurna!</p>,
+        hint: 'Watch the Kaurna for Kids numbers video and listen for the first few numbers. Point to each set of prints as you count.',
+        answer: <p><strong>Marnkutyi</strong> — that’s three, counted in Kaurna!</p>,
       },
       {
         level: 'Upper primary',
@@ -102,7 +100,7 @@ export const destinations: Destination[] = [
         options: [
           { label: 'Kuma', image: 'au-handprints.png' },
           { label: 'Purlaityi', image: 'au-handprints.png' },
-          { label: 'Marnkutyi', image: 'au-handprints.png' },
+          { label: 'Marnkutyi', image: 'au-handprints-asym.png' },
           { label: 'Yarapurla', image: 'au-handprints.png' },
         ],
         correct: 'Marnkutyi',
@@ -118,7 +116,7 @@ export const destinations: Destination[] = [
     subtitle: 'Welcome to America! Here we measure using a different system!',
     hook: 'Feet, miles, gallons and Fahrenheit — metric to imperial',
     accent: '#5E94B8',
-    mapPos: { left: 18, top: 38 },
+    mapPos: { left: 20, top: 46.7 },
     video: { note: 'Video to be added — placeholder for now.' },
     banner: 'america.png',
     didYouKnow:
@@ -195,7 +193,7 @@ export const destinations: Destination[] = [
     subtitle: 'Welcome to Southeast Asia! Vietnamese Tết recipe maths.',
     hook: 'Bánh Chưng rice cakes — doubling a recipe',
     accent: '#5FA89A',
-    mapPos: { left: 77, top: 57 },
+    mapPos: { left: 84.5, top: 57 },
     video: { id: '7CTT_33b3Ug', title: 'Making Bánh Chưng' },
     banner: 'southeast-asia.png',
     didYouKnow:
@@ -257,7 +255,7 @@ export const destinations: Destination[] = [
     subtitle: 'Welcome to the Democratic Republic of Congo! Ancient counting mysteries.',
     hook: 'The Ishango Bone number mystery',
     accent: '#6CA987',
-    mapPos: { left: 56, top: 58 },
+    mapPos: { left: 61, top: 62.4 },
     video: { id: 'oUPggWB5Efg', title: 'The Ishango Bone' },
     banner: 'east-central-africa.png',
     image: 'af-ishango-bone.png',
@@ -308,7 +306,7 @@ export const destinations: Destination[] = [
     subtitle: 'Welcome to Southern Africa! Mbira pattern maths.',
     hook: 'Mbira rhythm and clapping patterns from Zimbabwe',
     accent: '#74955F',
-    mapPos: { left: 57, top: 74 },
+    mapPos: { left: 54.5, top: 74 },
     video: { id: 'UJvOXxaJji4', title: 'Tarisiro — mbira' },
     banner: 'southern-africa.png',
     didYouKnow:
@@ -346,7 +344,7 @@ export const destinations: Destination[] = [
     subtitle: 'Numbers travelling across cultures.',
     hook: 'Urdu / Persian-Arabic numerals mystery message',
     accent: '#C09A62',
-    mapPos: { left: 51, top: 41 },
+    mapPos: { left: 53, top: 49.7 },
     video: { id: 'h0x8qEIt7Ro', title: 'Urdu Numbers 1–10 Sing-Along' },
     banner: 'middle-east-north-africa.png',
     didYouKnow:
@@ -398,7 +396,7 @@ export const destinations: Destination[] = [
               carefully and shared them with others. Their work helped knowledge travel between countries and
               cultures. Together these contributions continue to shape our numbers today.
             </blockquote>
-            <p>Positions to find: <strong>14 · 22 · 25 · 26 · 27 · 39 · 51 · 52 · 53</strong></p>
+            <p>Positions to find: <strong>١۴ · ٢٢ · ٢۵ · ٢۶ · ٢٧ · ٣٩ · ۵١ · ۵٢ · ۵٣</strong></p>
           </div>
         ),
         hint: 'Number every word in the paragraph carefully — count twice! Tick each word as you go.',
@@ -424,7 +422,7 @@ export const destinations: Destination[] = [
     subtitle: 'Can you cross every bridge once?',
     hook: 'Bridge and route puzzle inspired by Euler',
     accent: '#C4849C',
-    mapPos: { left: 49, top: 25 },
+    mapPos: { left: 51, top: 33.7 },
     video: { driveId: '1ppPNNEKm10rySYViMjXcqnaRBivMzn6N', title: 'Königsberg bridges' },
     banner: 'europe.png',
     image: 'eu-konigsberg-map.png',
