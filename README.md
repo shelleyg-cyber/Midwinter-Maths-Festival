@@ -44,11 +44,21 @@ Because a project Pages site is served from a sub-folder
 `basePath` of `/Midwinter-Maths-Festival` in production, and all image paths are
 prefixed accordingly. GitHub Pages paths are case-sensitive, so this must match the
 repository name exactly. If the repository is ever renamed, update that value (or set
-`NEXT_PUBLIC_BASE_PATH`). To host at a root domain instead (e.g. Vercel), set
-`NEXT_PUBLIC_BASE_PATH=""`.
+`NEXT_PUBLIC_BASE_PATH`).
 
 One-time setup: in the repository's **Settings → Pages**, set **Source** to
 **GitHub Actions**.
+
+## Deploying to Vercel
+
+Vercel serves from a root domain, so no base path is wanted there. The build
+auto-detects Vercel (it sets `VERCEL=1` during the build) and uses an empty base
+path automatically — no environment variables or config changes are needed.
+
+Import the repository in Vercel and deploy with the defaults: Vercel detects
+Next.js, runs `next build`, and serves the static export (`output: 'export'`).
+If you ever need to force the base path explicitly, set `NEXT_PUBLIC_BASE_PATH`
+(use `""` for a root domain).
 
 ## Project structure
 
@@ -70,13 +80,10 @@ public/assets/                  map artwork + activity images from the planning 
 
 ## Outstanding assets (flagged in-app on each affected page)
 
-- **America video** — still to be supplied. Add the YouTube ID to the destination's `video` field in
-  `lib/destinations.tsx`.
 - **Europe video** embeds from Google Drive — sharing must stay "Anyone with the link → Viewer" or it
   won't play in class (re-hosting on YouTube unlisted is more reliable).
 - **Australia**: four distinct handprint images (Kuma / Purlaityi / Marnkutyi / Yarapurla) — the current
   image is the placeholder repeated.
-- **Southern Africa**: mbira audio clip (~47 s).
 - **South Asia**: confirm the rangoli design matching the "6 rotations / 12 lines" answer.
 - **Map pin artwork**: the landing-page pins are wired to use teardrop marker images
   (`public/assets/pins/pin-<slug>.png`, transparent PNGs) — see the README in that folder for the

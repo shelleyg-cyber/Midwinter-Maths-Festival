@@ -578,6 +578,20 @@ button {
   font-style: italic;
   margin-top: 6px;
 }
+.maw-audio {
+  margin: 14px 0 0;
+}
+.maw-audio figcaption {
+  font-size: 0.8em;
+  color: var(--ink-soft);
+  font-style: italic;
+  margin-bottom: 6px;
+}
+.maw-audio audio {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+}
 .maw-quote {
   margin: 12px 0;
   padding: 14px 18px;

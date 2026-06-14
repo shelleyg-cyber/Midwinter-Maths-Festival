@@ -61,6 +61,14 @@ export default async function DestinationPage({ params }: { params: Promise<{ sl
         <section className="card look-first">
           <SectionLabel>Watch / Look first</SectionLabel>
           <VideoSlot video={d.video} />
+          {d.audio && (
+            <figure className="maw-audio">
+              {d.audio.title && <figcaption>{d.audio.title}</figcaption>}
+              <audio controls preload="none" src={ASSETS + d.audio.src}>
+                Your browser does not support the audio element.
+              </audio>
+            </figure>
+          )}
           {d.image && (
             <figure className="maw-fig">
               <img src={ASSETS + d.image} alt={d.imageAlt || ''} />

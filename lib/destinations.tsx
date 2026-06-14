@@ -59,6 +59,7 @@ export type Destination = {
   accent: string;
   mapPos: { left: number; top: number };
   video: { id?: string; driveId?: string; title?: string; note?: string };
+  audio?: { src: string; title?: string }; // optional clip — public/assets/
   banner?: string; // engraving artwork behind the title banner — public/assets/banners/
   image?: string;
   imageAlt?: string;
@@ -307,10 +308,10 @@ export const destinations: Destination[] = [
     accent: '#74955F',
     mapPos: { left: 54.5, top: 74 },
     video: { id: 'UJvOXxaJji4', title: 'Tarisiro — mbira' },
+    audio: { src: 'freesound_community-mbira-73623.mp3', title: 'Mbira rhythm clip' },
     banner: 'southern-africa.png',
     didYouKnow:
       'The mbira is a thumb piano strongly associated with Zimbabwean music traditions. Rhythm gives us a concrete way to experience repeating patterns, cycles, counting and prediction.',
-    outstanding: ['Mbira audio clip (freesound_community-mbira-73623.mp3, ~47 s) to be uploaded.'],
     challenges: [
       {
         level: 'Lower primary',
