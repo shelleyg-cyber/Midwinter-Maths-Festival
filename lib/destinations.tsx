@@ -117,11 +117,10 @@ export const destinations: Destination[] = [
     hook: 'Feet, miles, gallons and Fahrenheit — metric to imperial',
     accent: '#5E94B8',
     mapPos: { left: 20, top: 46.7 },
-    video: { note: 'Video to be added — placeholder for now.' },
+    video: { id: 'Sy1ELq3bPgM', title: 'Measurement in America — imperial units' },
     banner: 'america.png',
     didYouKnow:
       'Buying milk, filling up a car and checking the weather can all use different units in America. Many everyday measurements use the imperial system: length in inches and feet, long distances in miles, capacity in ounces and gallons, mass in pounds and temperature in degrees Fahrenheit.',
-    outstanding: ['Video to be supplied later.'],
     challenges: [
       {
         level: 'Lower primary',
