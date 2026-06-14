@@ -255,7 +255,7 @@ export const destinations: Destination[] = [
     subtitle: 'Welcome to the Democratic Republic of Congo! Ancient counting mysteries.',
     hook: 'The Ishango Bone number mystery',
     accent: '#6CA987',
-    mapPos: { left: 61, top: 62.4 },
+    mapPos: { left: 58.5, top: 62.4 },
     video: { id: 'oUPggWB5Efg', title: 'The Ishango Bone' },
     banner: 'east-central-africa.png',
     image: 'af-ishango-bone.png',
