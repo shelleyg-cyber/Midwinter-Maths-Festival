@@ -159,7 +159,7 @@ export const destinations: Destination[] = [
     subtitle: 'Welcome to South Asia! Patterns that celebrate.',
     hook: 'Rangoli patterns and lines of symmetry',
     accent: '#A8A060',
-    mapPos: { left: 68, top: 48 },
+    mapPos: { left: 70.5, top: 52.4 },
     video: { id: 'sGNGwH9UJZI', title: 'Big rangoli at mall — Diwali' },
     banner: 'south-asia.png',
     image: 'sa-rangoli.png',
