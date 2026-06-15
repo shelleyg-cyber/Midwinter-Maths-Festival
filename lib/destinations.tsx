@@ -345,7 +345,7 @@ export const destinations: Destination[] = [
     hook: 'Urdu / Persian-Arabic numerals mystery message',
     accent: '#C09A62',
     mapPos: { left: 53, top: 49.7 },
-    video: { id: 'h0x8qEIt7Ro', title: 'Urdu Numbers 1–10 Sing-Along' },
+    video: { id: 'j00LLyTaR4Q', title: 'Numbers in Urdu / Persian-Arabic' },
     banner: 'middle-east-north-africa.png',
     didYouKnow:
       'Long ago, people used many different ways to record quantities and solve problems. Mathematical ideas about place value travelled between regions — including India and the Middle East — and helped shape the number system many people use today.',
