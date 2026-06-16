@@ -228,11 +228,13 @@ button {
   gap: 10px;
   text-decoration: none;
   color: var(--ink);
+  /* Nudged down four times its own height so it lines up with Australia. */
+  transform: translateY(400%);
   transition: transform 0.15s ease;
 }
 .passport-cta:hover,
 .passport-cta:focus-visible {
-  transform: translateY(-3px) scale(1.03);
+  transform: translateY(400%) translateY(-3px) scale(1.03);
 }
 .passport-cta:focus-visible {
   outline: 3px solid var(--green);
