@@ -28,7 +28,6 @@ export default function PassportButton() {
           Passport
         </span>
       )}
-      <span className="passport-cta-label">▶ How to make your passport</span>
     </Link>
   );
 }

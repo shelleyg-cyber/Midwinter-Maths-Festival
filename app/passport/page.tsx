@@ -19,7 +19,8 @@ export default function PassportPage() {
       <h1>Make your passport</h1>
       <p className="passport-intro">
         Watch this short video to see how to make your 2026 Midwinter Maths Festival passport.
-        Then take it travelling — collect a stamp at every destination you visit on the map.
+        Then take it travelling — write the answer from every destination you visit on the map.
+        Your teacher will let you know if you succeeded in your Around the World Travel!
       </p>
       <section className="card look-first">
         <SectionLabel>Watch</SectionLabel>
