@@ -210,6 +210,79 @@ button {
   text-align: center;
 }
 
+/* ---------- passport button beside the map ---------- */
+/* Map + passport sit in a centred row; the passport wraps below the map on
+   narrower screens where there isn't room to the right. */
+.map-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 2.5vw, 44px);
+  width: 100%;
+}
+.passport-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.15s ease;
+}
+.passport-cta:hover,
+.passport-cta:focus-visible {
+  transform: translateY(-3px) scale(1.03);
+}
+.passport-cta:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+.passport-cover {
+  width: clamp(120px, 14vw, 220px);
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(59, 50, 40, 0.28);
+}
+.passport-cover-fallback {
+  aspect-ratio: 0.71;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 16px;
+  background: #2f5a86;
+  color: #e7cf86;
+  font-family: var(--font-head);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: clamp(15px, 1.6vw, 22px);
+}
+.passport-cta-label {
+  font-family: var(--font-head);
+  font-weight: 700;
+  color: var(--ochre);
+  font-size: clamp(13px, 1.3vw, 18px);
+  text-align: center;
+  max-width: 12em;
+  line-height: 1.2;
+}
+
+/* ---------- passport video page ---------- */
+.passport-page {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.passport-page h1 {
+  margin: 14px 0 8px;
+}
+.passport-intro {
+  color: var(--ink-soft);
+  margin: 0 0 20px;
+}
+
 /* ---------- destination shared ---------- */
 .dest {
   font-size: 20px;
