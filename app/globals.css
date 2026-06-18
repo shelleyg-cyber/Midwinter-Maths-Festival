@@ -262,6 +262,63 @@ button {
   text-transform: uppercase;
   font-size: clamp(15px, 1.6vw, 22px);
 }
+/* ---------- extra video tiles beside the map ---------- */
+.map-tiles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 2vw, 30px);
+}
+.map-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.15s ease;
+}
+.map-tile:hover,
+.map-tile:focus-visible {
+  transform: translateY(-3px) scale(1.04);
+}
+.map-tile:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 4px;
+  border-radius: 10px;
+}
+.map-tile-img {
+  width: clamp(72px, 9vw, 132px);
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(59, 50, 40, 0.28);
+}
+.map-tile-fallback {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  text-align: center;
+  background: var(--card);
+  border: 1.5px dashed var(--line);
+  color: var(--ink-soft);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(11px, 1.2vw, 15px);
+}
+.map-tile-label {
+  font-family: var(--font-head);
+  font-weight: 700;
+  color: var(--ochre);
+  font-size: clamp(12px, 1.2vw, 16px);
+  text-align: center;
+  max-width: 9em;
+  line-height: 1.2;
+}
+
 /* ---------- passport video page ---------- */
 .passport-page {
   max-width: 860px;
