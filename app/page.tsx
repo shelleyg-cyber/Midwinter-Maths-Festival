@@ -16,9 +16,9 @@ export default function MapPage() {
           <MapButtons />
         </div>
         <div className="map-side">
-          <PassportButton />
           <VideoTile href="/tile-patterns" img="tile-motif.png" label="Tile patterns" />
           <VideoTile href="/african-drums" img="african-drum.png" label="African drums" />
+          <PassportButton />
         </div>
       </div>
       <p className="map-tagline">Choose a destination to begin your journey</p>
