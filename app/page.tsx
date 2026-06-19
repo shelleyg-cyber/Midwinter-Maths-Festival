@@ -17,7 +17,7 @@ export default function MapPage() {
         </div>
         <div className="map-side">
           <VideoTile href="/tile-patterns" img="tile-motif.png" label="Tile patterns" />
-          <VideoTile href="/african-drums" img="african-drum.png" label="African drums" />
+          <VideoTile href="/african-drums" img="african-drum.png" label="South African Dancing" />
           <PassportButton />
         </div>
       </div>
