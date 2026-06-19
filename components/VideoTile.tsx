@@ -32,7 +32,6 @@ export default function VideoTile({
           {label}
         </span>
       )}
-      <span className="map-tile-label">{label}</span>
     </Link>
   );
 }

@@ -228,13 +228,11 @@ button {
   gap: 10px;
   text-decoration: none;
   color: var(--ink);
-  /* Nudged down four times its own height so it lines up with Australia. */
-  transform: translateY(400%);
   transition: transform 0.15s ease;
 }
 .passport-cta:hover,
 .passport-cta:focus-visible {
-  transform: translateY(400%) translateY(-3px) scale(1.03);
+  transform: translateY(-3px) scale(1.03);
 }
 .passport-cta:focus-visible {
   outline: 3px solid var(--green);
@@ -262,61 +260,54 @@ button {
   text-transform: uppercase;
   font-size: clamp(15px, 1.6vw, 22px);
 }
-/* ---------- extra video tiles beside the map ---------- */
-.map-tiles {
+/* ---------- passport + extra video tiles, stacked beside the map ---------- */
+/* Passport and the two video tiles share one vertical column, nudged down so
+   the group lines up with Australia / the lower-right of the map. */
+.map-side {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: clamp(14px, 2vw, 30px);
+  gap: clamp(6px, 0.8vw, 12px);
+  transform: translateY(150%);
 }
 .map-tile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
   text-decoration: none;
   color: var(--ink);
   transition: transform 0.15s ease;
 }
 .map-tile:hover,
 .map-tile:focus-visible {
-  transform: translateY(-3px) scale(1.04);
+  transform: translateY(-3px) scale(1.05);
 }
 .map-tile:focus-visible {
   outline: 3px solid var(--green);
-  outline-offset: 4px;
-  border-radius: 10px;
+  outline-offset: 3px;
+  border-radius: 8px;
 }
 .map-tile-img {
-  width: clamp(72px, 9vw, 132px);
+  width: clamp(15px, 1.75vw, 28px);
   height: auto;
   display: block;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(59, 50, 40, 0.28);
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(59, 50, 40, 0.28);
 }
 .map-tile-fallback {
   aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px;
+  padding: 4px;
   text-align: center;
   background: var(--card);
   border: 1.5px dashed var(--line);
   color: var(--ink-soft);
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: clamp(11px, 1.2vw, 15px);
-}
-.map-tile-label {
-  font-family: var(--font-head);
-  font-weight: 700;
-  color: var(--ochre);
-  font-size: clamp(12px, 1.2vw, 16px);
-  text-align: center;
-  max-width: 9em;
-  line-height: 1.2;
+  font-size: clamp(7px, 0.8vw, 10px);
 }
 
 /* ---------- passport video page ---------- */

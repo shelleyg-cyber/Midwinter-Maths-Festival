@@ -15,8 +15,8 @@ export default function MapPage() {
           />
           <MapButtons />
         </div>
-        <PassportButton />
-        <div className="map-tiles">
+        <div className="map-side">
+          <PassportButton />
           <VideoTile href="/tile-patterns" img="tile-motif.png" label="Tile patterns" />
           <VideoTile href="/african-drums" img="african-drum.png" label="African drums" />
         </div>
