@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/classical-6d51b75f-3d79-42f8-b468-faf8f0e81b2c/styles.css">
+  <script src="_ds/classical-6d51b75f-3d79-42f8-b468-faf8f0e81b2c/_ds_bundle.js"></script>
+  <script src="deck-widgets.js"></script>
+  <style>body{margin:0;background:#5b3fd6} a{color:#c47a12} a:hover{color:#f2a324}</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+<section data-label="Title" data-screen-label="Title" data-speaker-notes="Session 2: translation. Connect to last lesson's slide/flip/turn and to Cartesian plane moves." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:110px;background:#0f9e97;color:#efe9df;font-family:'Lora',serif;position:relative;overflow:hidden">
+  <div style="position:absolute;right:60px;bottom:-90px;font-family:'Cormorant Garamond',serif;font-size:640px;color:rgba(255,255,255,.16);line-height:1;font-feature-settings:'tnum'">02</div>
+  <div style="font-size:24px;letter-spacing:.22em;text-transform:uppercase;color:#ffffff">Transformations &amp; Tessellations · Session 2 of 8</div>
+  <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:130px;line-height:1.02;margin:34px 0 0;max-width:1400px">Translation — sliding shapes</h1>
+  <div style="height:1px;background:rgba(255,255,255,.5);width:520px;margin:44px 0"></div>
+  <p style="font-size:32px;margin:0;color:rgba(255,255,255,.85);max-width:1050px">No turning. No flipping. Every point slides the same distance, in the same direction.</p>
+</section>
+
+<section data-label="Daily Review" data-screen-label="Daily Review" data-speaker-notes="Quick retrieval — whiteboards up. Reveal each answer after students commit. Reteach only if needed." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:64px 90px 56px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:24px;letter-spacing:.18em;text-transform:uppercase;color:#12807b;border:1px solid #1fb6b0;border-radius:4px;padding:8px 20px">Daily Review</div>
+    <div style="font-size:24px;color:#8a857e;font-feature-settings:'tnum'">Session 2 · 01</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:56px;margin:24px 0 0;line-height:1.05">Warm up your maths brain</h2>
+  <div style="height:1px;background:#d8d5d1;margin:20px 0 30px"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:24px 30px;flex:1">
+    <div style="border:1px solid #d8d5d1;border-top:4px solid #1fb6b0;border-radius:4px;background:#ffffff;padding:26px 28px;display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:24px;letter-spacing:.16em;text-transform:uppercase;color:#12807b">Last lesson</div>
+      <div style="display:flex;gap:20px;align-items:flex-start;flex:1">
+        <p style="margin:0;font-size:26px;line-height:1.4;flex:1">Match: slide = ___, flip = ___, turn = ___</p>
+
+      </div>
+      <mw-reveal label="Answer"><div style="margin-top:4px;padding:14px 18px;border:1px solid #1fb6b0;border-radius:4px;background:#1fb6b01f;font-size:24px;line-height:1.45">slide = <strong>translation</strong><br>flip = <strong>reflection</strong><br>turn = <strong>rotation</strong></div></mw-reveal>
+    </div>
+    <div style="border:1px solid #d8d5d1;border-top:4px solid #1fb6b0;border-radius:4px;background:#ffffff;padding:26px 28px;display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:24px;letter-spacing:.16em;text-transform:uppercase;color:#12807b">Last week</div>
+      <div style="display:flex;gap:20px;align-items:flex-start;flex:1">
+        <p style="margin:0;font-size:26px;line-height:1.4;flex:1">Point A (2, 1) moves 3 spaces right. What is the new coordinate?</p>
+        <div style="flex:0 0 auto"><mw-coord points="A:2,1;A':5,1" arrow="2,1>5,1"></mw-coord></div>
+      </div>
+      <mw-reveal label="Answer"><div style="margin-top:4px;padding:14px 18px;border:1px solid #1fb6b0;border-radius:4px;background:#1fb6b01f;font-size:24px;line-height:1.45"><strong>A′ (5, 1)</strong>.</div></mw-reveal>
+    </div>
+    <div style="border:1px solid #d8d5d1;border-top:4px solid #1fb6b0;border-radius:4px;background:#ffffff;padding:26px 28px;display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:24px;letter-spacing:.16em;text-transform:uppercase;color:#12807b">Last unit</div>
+      <div style="display:flex;gap:20px;align-items:flex-start;flex:1">
+        <p style="margin:0;font-size:26px;line-height:1.4;flex:1">In (4, 6), which number is the x-coordinate?</p>
+
+      </div>
+      <mw-reveal label="Answer"><div style="margin-top:4px;padding:14px 18px;border:1px solid #1fb6b0;border-radius:4px;background:#1fb6b01f;font-size:24px;line-height:1.45"><strong>4</strong>.</div></mw-reveal>
+    </div>
+    <div style="border:1px solid #d8d5d1;border-top:4px solid #1fb6b0;border-radius:4px;background:#ffffff;padding:26px 28px;display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:24px;letter-spacing:.16em;text-transform:uppercase;color:#12807b">Last term</div>
+      <div style="display:flex;gap:20px;align-items:flex-start;flex:1">
+        <p style="margin:0;font-size:26px;line-height:1.4;flex:1">What is the area of a rectangle that is 5 m by 4 m?</p>
+
+      </div>
+      <mw-reveal label="Answer"><div style="margin-top:4px;padding:14px 18px;border:1px solid #1fb6b0;border-radius:4px;background:#1fb6b01f;font-size:24px;line-height:1.45"><strong>20 m²</strong>.</div></mw-reveal>
+    </div>
+  </div>
+</section>
+
+<section data-label="Fluency" data-screen-label="Fluency" data-speaker-notes="Run your separate fluency routine." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 80px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:24px;letter-spacing:.18em;text-transform:uppercase;color:#8a3fb8;border:1px solid #b06fd6;border-radius:4px;padding:8px 20px">Fluency</div>
+    <div style="font-size:24px;color:#8a857e;font-feature-settings:'tnum'">Session 2 · 02</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:76px;margin:44px 0 0;line-height:1.05">Fast, accurate, flexible</h2>
+  <div style="height:1px;background:#d8d5d1;margin:30px 0 46px"></div>
+  <div style="display:flex;gap:80px;align-items:center;flex:1">
+    <div style="flex:1;display:flex;flex-direction:column;gap:26px;font-size:32px;line-height:1.5">
+      <p style="margin:0">Short, sharp number practice — aim for <em>accuracy first</em>, then speed.</p>
+      <p style="margin:0;font-style:italic;color:#8a857e;font-size:26px">Teacher: run today's fluency routine or resource.</p>
+    </div>
+    <mw-timer minutes="{{ fluencyMinutes }}"></mw-timer>
+  </div>
+</section>
+
+<section data-label="Launch" data-screen-label="Launch" data-speaker-notes="Slide a shape on grid paper without turning it. Students turn and talk, then reveal." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 80px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:24px;letter-spacing:.18em;text-transform:uppercase;color:#e0522f;border:1px solid #ff7a52;border-radius:4px;padding:8px 20px">Launch</div>
+    <div style="font-size:24px;color:#8a857e;font-feature-settings:'tnum'">Session 2 · 03</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:76px;margin:44px 0 0;line-height:1.05">This shape just moved. How?</h2>
+  <div style="height:1px;background:#d8d5d1;margin:30px 0 40px"></div>
+  <div style="display:flex;gap:70px;align-items:flex-start">
+    <div style="flex:1;display:flex;flex-direction:column;gap:28px">
+      <p style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:600;margin:0">What changed? What stayed the same?</p>
+      <p style="margin:0;font-size:27px;font-style:italic;color:#8a857e">Turn and talk with your partner.</p>
+      <mw-reveal label="Reveal the big idea">
+        <p style="margin:0;font-size:31px;line-height:1.5;padding:22px 28px;border:1px solid #ff7a52;border-radius:4px;background:#ff7a5214">Same size, same shape, <strong>still facing the same way</strong> — it just moved to a new position. That's a slide.</p>
+      </mw-reveal>
+    </div>
+    <mw-shape type="translation"></mw-shape>
+  </div>
+</section>
+
+<section data-label="Learning Intention" data-screen-label="Learning Intention" data-speaker-notes="Unpack in student-friendly language." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 80px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:24px;letter-spacing:.18em;text-transform:uppercase;color:#c47a12;border:1px solid #f2a324;border-radius:4px;padding:8px 20px">Learning Intention &amp; Success Criteria</div>
+    <div style="font-size:24px;color:#8a857e;font-feature-settings:'tnum'">Session 2 · 04</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:70px;margin:44px 0 0;line-height:1.15;max-width:1500px">We are learning to translate shapes by sliding them to a new position.</h2>
+  <div style="height:1px;background:#d8d5d1;margin:34px 0 44px"></div>
+  <p style="margin:0 0 26px;font-size:26px;letter-spacing:.14em;text-transform:uppercase;color:#c47a12">You'll know you've got it when…</p>
+  <div style="display:flex;flex-direction:column;gap:22px;font-size:33px;line-height:1.4">
+    <div style="display:flex;gap:20px;align-items:baseline"><span style="color:#f2a324;font-size:30px">☐</span><span>I can describe a translation as a slide.</span></div>
+    <div style="display:flex;gap:20px;align-items:baseline"><span style="color:#f2a324;font-size:30px">☐</span><span>I can translate a shape without turning or flipping it.</span></div>
+    <div style="display:flex;gap:20px;align-items:baseline"><span style="color:#f2a324;font-size:30px">☐</span><span>I can explain what changes and what stays the same after a translation.</span></div>
+  </div>
+</section>
+
+<section data-label="Explicit Explanation" data-screen-label="Explicit Explanation" data-speaker-notes="Model a triangle on a four-quadrant plane translating 3 right; record original and new coordinates for each vertex. Every point moves the same distance, same direction." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:70px 110px 56px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:24px;letter-spacing:.18em;text-transform:uppercase;color:#c47a12;border:1px solid #f2a324;border-radius:4px;padding:8px 20px">Explicit Explanation</div>
+    <div style="font-size:24px;color:#8a857e;font-feature-settings:'tnum'">Session 2 · 05</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:64px;margin:30px 0 0;line-height:1.05">Every point moves together</h2>
+  <div style="height:1px;background:#d8d5d1;margin:24px 0 30px"></div>
+  <div style="display:flex;gap:60px;align-items:center;flex:1">
+    <div style="flex:1;display:flex;flex-direction:column;gap:24px;font-size:30px;line-height:1.55">
+      <p style="margin:0">A translation means a <strong>slide</strong>. Every point on the shape moves the <strong>same distance</strong> in the <strong>same direction</strong> — no turning, no flipping, no stretching.</p>
+      <p style="margin:0">If a triangle moves 4 spaces right, <em>every vertex</em> moves 4 spaces right. The x-coordinates change; the y-coordinates stay the same.</p>
+      <p style="margin:0;padding:20px 26px;border:1px solid #d8d5d1;border-radius:4px;background:#ffffff;font-size:27px">Remember our Cartesian plane lessons? Moving shapes left, right, up and down — we were translating all along.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;align-items:center">
+      <mw-shape type="translation" width="620"></mw-shape>
+      <p style="margin:0;font-size:24px;color:#8a857e;font-style:italic">The dotted shape shows where it started.</p>
+    </div>
+  </div>
+</section>
+
+<section data-label="Vocabulary" data-screen-label="Vocabulary" data-speaker-notes="Say each word aloud together." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 80px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:24px;letter-spacing:.18em;text-transform:uppercase;color:#2568cc;border:1px solid #3f8ef0;border-radius:4px;padding:8px 20px">Vocabulary</div>
+    <div style="font-size:24px;color:#8a857e;font-feature-settings:'tnum'">Session 2 · 06</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:72px;margin:44px 0 0;line-height:1.05">Words mathematicians use</h2>
+  <div style="height:1px;background:#d8d5d1;margin:30px 0 46px"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:26px 60px;font-size:31px;line-height:1.45">
+    <div style="display:flex;gap:22px;align-items:baseline"><span style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#2568cc;min-width:310px">translation</span><span>a slide</span></div>
+    <div style="display:flex;gap:22px;align-items:baseline"><span style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#2568cc;min-width:310px">vertex</span><span>a corner point of a shape</span></div>
+    <div style="display:flex;gap:22px;align-items:baseline"><span style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#2568cc;min-width:310px">orientation</span><span>the direction a shape is facing</span></div>
+    <div style="display:flex;gap:22px;align-items:baseline"><span style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#2568cc;min-width:310px">horizontal</span><span>left or right</span></div>
+    <div style="display:flex;gap:22px;align-items:baseline"><span style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#2568cc;min-width:310px">vertical</span><span>up or down</span></div>
+  </div>
+</section>
+
+<section data-label="Guided Practice" data-screen-label="Guided Practice" data-speaker-notes="Model on the grid: 4 spaces right, then 3 spaces down. Students copy on grid paper and record the new position. Check nobody turns or flips." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 70px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:24px;letter-spacing:.18em;text-transform:uppercase;color:#5a9420;border:1px solid #7cc23d;border-radius:4px;padding:8px 20px">Guided Practice</div>
+    <div style="font-size:24px;color:#8a857e;font-feature-settings:'tnum'">Session 2 · 07</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:68px;margin:36px 0 0;line-height:1.05">Slide it together</h2>
+  <div style="height:1px;background:#d8d5d1;margin:26px 0 36px"></div>
+  <div style="display:flex;gap:70px;align-items:flex-start">
+    <div style="flex:1;display:flex;flex-direction:column;gap:24px;font-size:29px;line-height:1.5">
+      <div style="display:flex;gap:18px"><span style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#7cc23d;font-feature-settings:'tnum'">1</span><span>Copy the starting shape on your grid.</span></div>
+      <div style="display:flex;gap:18px"><span style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#7cc23d;font-feature-settings:'tnum'">2</span><span>Translate it <strong>4 spaces right</strong>. Record the new position.</span></div>
+      <div style="display:flex;gap:18px"><span style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#7cc23d;font-feature-settings:'tnum'">3</span><span>Now translate it <strong>3 spaces down</strong>.</span></div>
+      <p style="margin:10px 0 0;padding:18px 24px;border:1px solid #d8d5d1;border-radius:4px;background:#ffffff;font-size:26px">Say it like a mathematician: <em>"The shape translated because it slid. It stayed the same size and same shape."</em></p>
+    </div>
+    <mw-drag shapes="triangle,square" plane="cartesian" width="880" height="520"></mw-drag>
+  </div>
+</section>
+
+<section data-label="Independent Practice" data-screen-label="Independent Practice" data-speaker-notes="Rove and check. Red: slide shapes on a grid from directions. Orange: translate on a Cartesian plane and record coordinates. Green: two translations plus a coordinate rule." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 70px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:24px;letter-spacing:.18em;text-transform:uppercase;color:#c47a12;border:1px solid #f2a324;border-radius:4px;padding:8px 20px">Independent Practice</div>
+    <div style="font-size:24px;color:#8a857e;font-feature-settings:'tnum'">Session 2 · 08</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:68px;margin:36px 0 0;line-height:1.05">Choose your challenge</h2>
+  <div style="height:1px;background:#d8d5d1;margin:26px 0 36px"></div>
+  <div style="display:flex;gap:32px;flex:1;align-items:stretch">
+    <div style="flex:1;border:1px solid #d8d5d1;border-top:4px solid #ff6b57;border-radius:4px;padding:34px;background:#ffffff;display:flex;flex-direction:column;gap:14px">
+      <div style="font-size:24px;letter-spacing:.16em;text-transform:uppercase;color:#ff6b57">Red · Building the idea</div>
+      <p style="margin:0;font-size:27px;line-height:1.5">Slide simple shapes on a grid using directions like <em>2 spaces right</em> or <em>3 spaces up</em>. Trace or redraw the new shape.</p>
+    </div>
+    <div style="flex:1;border:1px solid #d8d5d1;border-top:4px solid #f2a324;border-radius:4px;padding:34px;background:#ffffff;display:flex;flex-direction:column;gap:14px">
+      <div style="font-size:24px;letter-spacing:.16em;text-transform:uppercase;color:#c47a12">Orange · Level 6 core</div>
+      <p style="margin:0;font-size:27px;line-height:1.5">Translate shapes on a Cartesian plane and record the new coordinates of each vertex.</p>
+    </div>
+    <div style="flex:1;border:1px solid #d8d5d1;border-top:4px solid #7cc23d;border-radius:4px;padding:34px;background:#ffffff;display:flex;flex-direction:column;gap:14px">
+      <div style="font-size:24px;letter-spacing:.16em;text-transform:uppercase;color:#7cc23d">Green · Extender</div>
+      <p style="margin:0;font-size:27px;line-height:1.5">Create your own shape, translate it <em>twice</em>, and write the coordinate rule for each translation — like <em>add 4 to every x</em>.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:center;padding-left:16px">
+      <mw-timer minutes="{{ taskMinutes }}"></mw-timer>
+    </div>
+  </div>
+</section>
+
+<section data-label="Spotlight" data-screen-label="Spotlight" data-speaker-notes="Common trap: one vertex slides correctly, the rest of the shape is redrawn inaccurately." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 80px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:24px;letter-spacing:.18em;text-transform:uppercase;color:#e0522f;border:1px solid #ff7a52;border-radius:4px;padding:8px 20px">Spotlight</div>
+    <div style="font-size:24px;color:#8a857e;font-feature-settings:'tnum'">Session 2 · 09</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:72px;margin:44px 0 0;line-height:1.05">Eyes up — one big idea</h2>
+  <div style="height:1px;background:#d8d5d1;margin:30px 0 46px"></div>
+  <p style="margin:0 0 30px;font-size:32px;line-height:1.55;max-width:1500px">One vertex slid perfectly… but the rest of the shape went wobbly. What went wrong?</p>
+  <mw-reveal label="Reveal the clarification">
+    <div style="border:1px solid #ff7a52;border-radius:4px;background:#ff7a5214;padding:36px 42px;font-size:31px;line-height:1.6;max-width:1500px">
+      <p style="margin:0">In a translation, <strong>every point</strong> moves the same distance in the same direction. The shape slides as <strong>one whole shape</strong> — check every vertex, not just one.</p>
+    </div>
+  </mw-reveal>
+</section>
+
+<section data-label="Reflection" data-screen-label="Reflection" data-speaker-notes="Revisit the success criteria." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 80px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:24px;letter-spacing:.18em;text-transform:uppercase;color:#12807b;border:1px solid #1fb6b0;border-radius:4px;padding:8px 20px">Reflection</div>
+    <div style="font-size:24px;color:#8a857e;font-feature-settings:'tnum'">Session 2 · 10</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:72px;margin:44px 0 0;line-height:1.05">How did you go?</h2>
+  <div style="height:1px;background:#d8d5d1;margin:30px 0 46px"></div>
+  <p style="margin:0 0 30px;font-size:28px;font-style:italic;color:#8a857e">Give yourself a quiet tick, cross or "nearly" for each one.</p>
+  <div style="display:flex;flex-direction:column;gap:24px;font-size:34px;line-height:1.4">
+    <div style="display:flex;gap:20px;align-items:baseline"><span style="color:#1fb6b0;font-size:30px">☐</span><span>I can describe a translation as a slide.</span></div>
+    <div style="display:flex;gap:20px;align-items:baseline"><span style="color:#1fb6b0;font-size:30px">☐</span><span>I can translate a shape without turning or flipping it.</span></div>
+    <div style="display:flex;gap:20px;align-items:baseline"><span style="color:#1fb6b0;font-size:30px">☐</span><span>I can explain what changes and what stays the same after a translation.</span></div>
+  </div>
+</section>
+
+<section data-label="Exit Ticket" data-screen-label="Exit Ticket" data-speaker-notes="Independent evidence. Reveal answers only after collecting responses." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 70px;background:#0f9e97;color:#efe9df;font-family:'Lora',serif;position:relative;overflow:hidden">
+  <div style="position:absolute;right:40px;top:-70px;font-family:'Cormorant Garamond',serif;font-size:380px;color:rgba(255,255,255,.16);line-height:1">✦</div>
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:24px;letter-spacing:.18em;text-transform:uppercase;color:#ffffff;border:1px solid #ffffff;border-radius:4px;padding:8px 20px">Exit Ticket</div>
+    <div style="font-size:24px;color:rgba(255,255,255,.7);font-feature-settings:'tnum'">Session 2 · 11</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:72px;margin:40px 0 0;line-height:1.05">Show what you know</h2>
+  <div style="height:1px;background:rgba(255,255,255,.5);margin:28px 0 40px"></div>
+  <div style="display:flex;gap:80px;align-items:flex-start">
+    <div style="flex:1.2;display:flex;flex-direction:column;gap:24px;font-size:31px;line-height:1.6">
+      <p style="margin:0">A triangle has moved <strong>5 spaces left</strong>.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;font-size:30px">
+        <div style="display:flex;gap:18px"><span style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#ffffff;font-feature-settings:'tnum'">1</span><span>What transformation is this?</span></div>
+        <div style="display:flex;gap:18px"><span style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#ffffff;font-feature-settings:'tnum'">2</span><span>Did the shape turn, flip or slide?</span></div>
+        <div style="display:flex;gap:18px"><span style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#ffffff;font-feature-settings:'tnum'">3</span><span>If the original point was A (4, 2), what is the new coordinate after moving 5 spaces left?</span></div>
+      </div>
+    </div>
+    <div style="flex:1">
+      <mw-reveal dark label="Reveal the answers">
+        <div style="border:1px solid rgba(255,255,255,.55);border-radius:4px;padding:32px 38px;font-size:29px;line-height:1.7;background:rgba(0,0,0,.20)">
+          <p style="margin:0">It is a <strong>translation</strong>.<br>The shape <strong>slid</strong>.<br>A (4, 2) becomes <strong>A′ (−1, 2)</strong>.</p>
+        </div>
+      </mw-reveal>
+      <p style="margin:30px 0 0;font-size:24px;color:rgba(255,255,255,.75)"><a href="Menu.dc.html" style="color:#ffffff">← Menu</a> · <a href="Session 1.dc.html" style="color:#ffffff">Session 1</a> · <a href="Session 3.dc.html" style="color:#ffffff">Next: Session 3 →</a></p>
+    </div>
+  </div>
+</section>
+
+</x-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;reviewMinutes&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:10,&quot;min&quot;:2,&quot;max&quot;:20,&quot;step&quot;:1,&quot;unit&quot;:&quot;min&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Timers&quot;},&quot;fluencyMinutes&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:5,&quot;min&quot;:2,&quot;max&quot;:15,&quot;step&quot;:1,&quot;unit&quot;:&quot;min&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Timers&quot;},&quot;taskMinutes&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:20,&quot;min&quot;:5,&quot;max&quot;:40,&quot;step&quot;:1,&quot;unit&quot;:&quot;min&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Timers&quot;}}"></script>
+</body>
+</html>
