@@ -56,7 +56,12 @@ jobs:
       - name: Setup Pages
         # Base path, static export and unoptimized images are configured
         # explicitly in next.config.mjs, so the auto-injection is not used.
+        # enablement: true lets this workflow (re)enable Pages if it has been
+        # turned off — e.g. after the repo was toggled private — so a deploy
+        # doesn't fail with "Get Pages site failed / Pages not enabled".
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - name: Restore cache
         uses: actions/cache@v4
         with:
