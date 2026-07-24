@@ -22,7 +22,7 @@ class MWTimer extends HTMLElement {
       .t{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
         font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:600;color:${INK};font-feature-settings:'tnum'}
       .btns{display:flex;gap:10px}
-      button{font-family:'Lora',serif;font-size:19px;padding:8px 22px;background:transparent;
+      button{font-family:'Lora',serif;font-size:36px;padding:8px 22px;background:transparent;
         border:1px solid ${ACCENT};color:#c47a12;border-radius:4px;cursor:pointer}
       button:hover{background:rgba(242,163,36,.12)}
       :host(.done) .t{color:${ACCENT};animation:blink 1s steps(2) 6}
@@ -73,7 +73,7 @@ class MWReveal extends HTMLElement {
     const r = this.attachShadow({mode: 'open'});
     r.innerHTML = `<style>
       :host{display:block}
-      button{font-family:'Lora',serif;font-size:22px;padding:12px 30px;background:transparent;
+      button{font-family:'Lora',serif;font-size:36px;padding:13px 32px;background:transparent;
         border:1px solid ${bc};color:${tc};border-radius:4px;cursor:pointer;letter-spacing:.02em}
       button:hover{background:${hov}}
       .body{display:none}
@@ -98,14 +98,14 @@ class MWShape extends HTMLElement {
     let grid = '';
     for (let x = 0; x <= W; x += G) grid += `<line x1="${x}" y1="0" x2="${x}" y2="${H}" stroke="#e3e1de" stroke-width="1"/>`;
     for (let y = 0; y <= H; y += G) grid += `<line x1="0" y1="${y}" x2="${W}" y2="${y}" stroke="#e3e1de" stroke-width="1"/>`;
-    const tri = 'M0,0 L120,80 L20,110 Z';
+    const tri = 'M0,0 L120,80 L0,120 Z';
     let extra = '', anims;
-    if (type === 'reflection') extra = `<line x1="${W/2}" y1="12" x2="${W/2}" y2="${H-12}" stroke="${ACCENT}" stroke-width="2" stroke-dasharray="8 7"/>`;
-    if (type === 'rotation') extra = `<circle cx="${W/2}" cy="${H/2}" r="6" fill="${ACCENT}"/>`;
+    if (type === 'reflection') extra = `<line x1="${W/2}" y1="0" x2="${W/2}" y2="${H}" stroke="${ACCENT}" stroke-width="2" stroke-dasharray="8 7"/>`;
+    if (type === 'rotation') extra = `<circle cx="280" cy="200" r="6" fill="${ACCENT}"/>`;
     r.innerHTML = `<style>
       :host{display:inline-flex;flex-direction:column;align-items:center;gap:12px}
       svg{background:#fbfaf9;border:1px solid #d8d5d1;border-radius:4px}
-      button{font-family:'Lora',serif;font-size:19px;padding:8px 24px;background:transparent;
+      button{font-family:'Lora',serif;font-size:36px;padding:8px 24px;background:transparent;
         border:1px solid ${ACCENT};color:#c47a12;border-radius:4px;cursor:pointer}
       button:hover{background:rgba(242,163,36,.12)}
     </style>
@@ -116,7 +116,8 @@ class MWShape extends HTMLElement {
     </svg>
     <button>▶ Play it</button>`;
     const mover = r.querySelector('.mover'), ghost = r.querySelector('.ghost');
-    const start = {translation: [80, 90], reflection: [90, 100], rotation: [W/2 - 150, H/2 - 120], combo: [40, 60]}[type] || [80, 90];
+    const start = {translation: [80, 80], reflection: [80, 80], rotation: [200, 80], combo: [80, 80]}[type] || [80, 80];
+    const RC = [280, 200];
     const base = `translate(${start[0]}px,${start[1]}px)`;
     ghost.style.transform = base; mover.style.transform = base;
     if (type === 'translation') anims = [
@@ -125,13 +126,13 @@ class MWShape extends HTMLElement {
       {transform: base},
       {transform: `translate(${2*(W/2) - start[0]}px,${start[1]}px) scaleX(-1)`}];
     else if (type === 'rotation') anims = [
-      {transform: `translate(${W/2}px,${H/2}px) rotate(0deg) translate(${start[0]-W/2}px,${start[1]-H/2}px)`},
-      {transform: `translate(${W/2}px,${H/2}px) rotate(90deg) translate(${start[0]-W/2}px,${start[1]-H/2}px)`}];
+      {transform: `translate(${RC[0]}px,${RC[1]}px) rotate(0deg) translate(${start[0]-RC[0]}px,${start[1]-RC[1]}px)`},
+      {transform: `translate(${RC[0]}px,${RC[1]}px) rotate(90deg) translate(${start[0]-RC[0]}px,${start[1]-RC[1]}px)`}];
     else anims = [
       {transform: base, offset: 0},
-      {transform: `translate(${start[0]+220}px,${start[1]}px)`, offset: .45},
-      {transform: `translate(${start[0]+220}px,${start[1]}px)`, offset: .55},
-      {transform: `translate(${start[0]+220}px,${start[1]+120}px) scaleY(-1)`, offset: 1}];
+      {transform: `translate(${start[0]+240}px,${start[1]}px)`, offset: .45},
+      {transform: `translate(${start[0]+240}px,${start[1]}px)`, offset: .55},
+      {transform: `translate(${start[0]+240}px,${start[1]+120}px) scaleY(-1)`, offset: 1}];
     if (type === 'rotation') { ghost.style.transform = anims[0].transform; mover.style.transform = anims[0].transform; }
     r.querySelector('button').onclick = () =>
       mover.animate(anims, {duration: type === 'combo' ? 3400 : 2000, easing: 'ease-in-out', fill: 'forwards'});
@@ -156,7 +157,7 @@ class MWDrag extends HTMLElement {
       :host{display:inline-flex;flex-direction:column;gap:12px;align-items:center}
       svg{background:#fbfaf9;border:1px solid #d8d5d1;border-radius:4px;touch-action:none}
       .bar{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-      button{font-family:'Lora',serif;font-size:18px;padding:7px 18px;background:transparent;
+      button{font-family:'Lora',serif;font-size:36px;padding:7px 18px;background:transparent;
         border:1px solid ${ACCENT};color:#c47a12;border-radius:4px;cursor:pointer}
       button:hover{background:rgba(242,163,36,.12)}
       g.sel path{stroke-width:3.5}
@@ -293,7 +294,7 @@ class MWTess extends HTMLElement {
       polygon{stroke:#fbfaf9;stroke-width:1.5;transform-box:fill-box;transform-origin:center}
       polygon.building{opacity:0;transform:scale(.2)}
       polygon.on{opacity:1;transform:scale(1);transition:opacity .3s,transform .3s}
-      button{font-family:'Lora',serif;font-size:19px;padding:8px 24px;background:transparent;
+      button{font-family:'Lora',serif;font-size:36px;padding:8px 24px;background:transparent;
         border:1px solid #f2a324;color:#c47a12;border-radius:4px;cursor:pointer}
       button:hover{background:rgba(242,163,36,.12)}
     </style>
@@ -310,4 +311,97 @@ class MWTess extends HTMLElement {
   }
 }
 customElements.define('mw-tess', MWTess);
+
+/* ---------- mw-guess : before/after, students vote, then animate to prove ---------- */
+class MWGuess extends HTMLElement {
+  connectedCallback() {
+    if (this.shadowRoot) return;
+    const W = 560, H = 360, G = 40, RC = [280, 200];
+    const tri = 'M0,0 L120,80 L0,120 Z';
+    const st = s => `translate(${s[0]}px,${s[1]}px)`;
+    const vLine = x => `<line x1="${x}" y1="0" x2="${x}" y2="${H}" stroke="${ACCENT}" stroke-width="2" stroke-dasharray="8 7"/>`;
+    const hLine = y => `<line x1="0" y1="${y}" x2="${W}" y2="${y}" stroke="${ACCENT}" stroke-width="2" stroke-dasharray="8 7"/>`;
+    const dot = (x, y) => `<circle cx="${x}" cy="${y}" r="6" fill="${ACCENT}"/>`;
+    const rot = (s, c, deg) => `translate(${c[0]}px,${c[1]}px) rotate(${deg}deg) translate(${s[0]-c[0]}px,${s[1]-c[1]}px)`;
+    this.rounds = [
+      // slide right + down
+      {type: 'Translation', startT: st([80, 80]), endT: `translate(${80+240}px,${80+80}px)`},
+      // flip across a vertical mirror line
+      {type: 'Reflection', startT: st([80, 80]), endT: `translate(${2*280-80}px,80px) scaleX(-1)`, guide: vLine(280)},
+      // quarter turn about a point
+      {type: 'Rotation', startT: rot([200, 80], RC, 0), endT: rot([200, 80], RC, 90), guide: dot(280, 200)},
+      // slide up + right
+      {type: 'Translation', startT: st([80, 240]), endT: `translate(${80+200}px,${240-160}px)`},
+      // flip across a horizontal mirror line
+      {type: 'Reflection', startT: st([80, 40]), endT: `translate(80px,${2*180-40}px) scaleY(-1)`, guide: hLine(180)},
+      // half turn about a point
+      {type: 'Rotation', startT: rot([160, 80], RC, 0), endT: rot([160, 80], RC, 180), guide: dot(280, 200)}];
+    this.i = 0;
+    const r = this.attachShadow({mode: 'open'});
+    let grid = '';
+    for (let x = 0; x <= W; x += G) grid += `<line x1="${x}" y1="0" x2="${x}" y2="${H}" stroke="#e3e1de"/>`;
+    for (let y = 0; y <= H; y += G) grid += `<line x1="0" y1="${y}" x2="${W}" y2="${y}" stroke="#e3e1de"/>`;
+    r.innerHTML = `<style>
+      :host{display:inline-flex;flex-direction:column;align-items:center;gap:14px}
+      svg{background:#fbfaf9;border:1px solid #d8d5d1;border-radius:4px}
+      .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;max-width:${W}px}
+      button{font-family:'Lora',serif;font-size:30px;padding:9px 22px;background:transparent;
+        border:1px solid ${ACCENT};color:#c47a12;border-radius:4px;cursor:pointer}
+      button:hover:not(:disabled){background:rgba(242,163,36,.12)}
+      button:disabled{cursor:default;opacity:.9}
+      button.right{background:#1fb6b0;border-color:#1fb6b0;color:#fff}
+      button.wrong{background:#e0522f;border-color:#e0522f;color:#fff}
+      .next{border-color:#5b3fd6;color:#5b3fd6}
+      .cap{font-family:'Lora',serif;font-size:30px;color:#8a857e;font-style:italic}
+    </style>
+    <svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+      ${grid}<g class="guide"></g>
+      <path class="ghost" d="${tri}" fill="none" stroke="#b8b4af" stroke-width="2" stroke-dasharray="6 6"/>
+      <path class="mover" d="${tri}" fill="rgba(242,163,36,.28)" stroke="${ACCENT}" stroke-width="2.5"/>
+    </svg>
+    <div class="cap">Before = dashed · After = solid. What happened?</div>
+    <div class="rd" style="font-family:'Lora',serif;font-size:30px;color:#5a9420"></div>
+    <div class="row">
+      <button data-a="Translation">Translation</button>
+      <button data-a="Reflection">Reflection</button>
+      <button data-a="Rotation">Rotation</button>
+    </div>`;
+    this.$ = r;
+    this.load();
+    r.querySelectorAll('[data-a]').forEach(b => b.onclick = () => this.answer(b));
+  }
+  load() {
+    const rd = this.rounds[this.i], $ = this.$;
+    this.answered = false;
+    $.querySelector('.rd').textContent = `Example ${this.i + 1} of ${this.rounds.length}`;
+    $.querySelector('.guide').innerHTML = '';
+    $.querySelector('.ghost').style.transform = rd.startT;
+    const m = $.querySelector('.mover');
+    m.getAnimations().forEach(a => a.cancel());
+    m.style.transform = rd.endT;
+    $.querySelector('.cap').textContent = 'Before = dashed · After = solid. What happened?';
+    $.querySelectorAll('[data-a]').forEach(b => { b.disabled = false; b.className = ''; });
+    const nx = $.querySelector('.next'); if (nx) nx.remove();
+  }
+  answer(btn) {
+    if (this.answered) return;
+    this.answered = true;
+    const rd = this.rounds[this.i], $ = this.$;
+    const correct = btn.dataset.a === rd.type;
+    btn.classList.add(correct ? 'right' : 'wrong');
+    if (!correct) $.querySelector(`[data-a="${rd.type}"]`).classList.add('right');
+    $.querySelectorAll('[data-a]').forEach(b => b.disabled = true);
+    if (rd.guide) $.querySelector('.guide').innerHTML = rd.guide;
+    const m = $.querySelector('.mover');
+    m.style.transform = rd.startT;
+    requestAnimationFrame(() => m.animate([{transform: rd.startT}, {transform: rd.endT}],
+      {duration: 2000, easing: 'ease-in-out', fill: 'forwards'}));
+    $.querySelector('.cap').textContent = `It was a ${rd.type.toLowerCase()} — watch it move to prove it.`;
+    const nx = document.createElement('button');
+    nx.className = 'next'; nx.textContent = 'Next shape ▶';
+    nx.onclick = () => { this.i = (this.i + 1) % this.rounds.length; this.load(); this.$.querySelectorAll('[data-a]').forEach(b => b.onclick = () => this.answer(b)); };
+    $.querySelector('.row').appendChild(nx);
+  }
+}
+customElements.define('mw-guess', MWGuess);
 })();
