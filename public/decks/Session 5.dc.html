@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/classical-6d51b75f-3d79-42f8-b468-faf8f0e81b2c/styles.css">
+  <script src="_ds/classical-6d51b75f-3d79-42f8-b468-faf8f0e81b2c/_ds_bundle.js"></script>
+  <script src="deck-widgets.js"></script>
+  <style>body{margin:0;background:#5b3fd6} a{color:#c47a12} a:hover{color:#f2a324}</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%">
+
+<section data-label="Title" data-screen-label="Title" data-speaker-notes="Session 5: sequences of transformations. This builds directly toward tessellations." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:110px;background:#3fa63f;color:#efe9df;font-family:'Lora',serif;position:relative;overflow:hidden">
+  <div style="position:absolute;right:60px;bottom:-90px;font-family:'Cormorant Garamond',serif;font-size:640px;color:rgba(255,255,255,.16);line-height:1;font-feature-settings:'tnum'">05</div>
+  <div style="font-size:36px;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap;color:#ffffff">Transformations &amp; Tessellations · Session 5 of 8</div>
+  <h1 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:120px;line-height:1.02;margin:34px 0 0;max-width:1500px">Combining transformations</h1>
+  <div style="height:1px;background:rgba(255,255,255,.5);width:520px;margin:44px 0"></div>
+  <p style="font-size:36px;margin:0;color:rgba(255,255,255,.85);max-width:1050px">Slide, then flip. Turn, then slide. The order changes everything.</p>
+</section>
+
+<section data-label="Daily Review" data-screen-label="Daily Review" data-speaker-notes="Quick retrieval — whiteboards up. Reveal each answer after students commit. Reteach only if needed." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:40px 80px 34px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:36px;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;color:#12807b;border:1px solid #1fb6b0;border-radius:4px;padding:8px 20px">Daily Review</div>
+    <div style="font-size:36px;color:#8a857e;font-feature-settings:'tnum'">Session 5 · 01</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:48px;margin:16px 0 0;line-height:1.05">Warm up your maths brain</h2>
+  <div style="height:1px;background:#d8d5d1;margin:16px 0 22px"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:14px 22px;flex:1">
+    <div style="border:1px solid #d8d5d1;border-top:4px solid #1fb6b0;border-radius:4px;background:#ffffff;padding:18px 22px;display:flex;flex-direction:column;gap:8px">
+      <div style="font-size:36px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;color:#12807b">Last lesson</div>
+      <div style="display:flex;gap:20px;align-items:flex-start;flex:1">
+        <p style="margin:0;font-size:36px;line-height:1.25;flex:1">A rotation means a shape ______.</p>
+        
+      </div>
+      <mw-reveal label="Answer"><div style="margin-top:4px;padding:11px 16px;border:1px solid #1fb6b0;border-radius:4px;background:#1fb6b01f;font-size:36px;line-height:1.3"><strong>turns</strong>.</div></mw-reveal>
+    </div>
+    <div style="border:1px solid #d8d5d1;border-top:4px solid #1fb6b0;border-radius:4px;background:#ffffff;padding:18px 22px;display:flex;flex-direction:column;gap:8px">
+      <div style="font-size:36px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;color:#12807b">Last week</div>
+      <div style="display:flex;gap:20px;align-items:flex-start;flex:1">
+        <p style="margin:0;font-size:36px;line-height:1.25;flex:1">Point B (1, 5) moves 2 spaces down. What is the new coordinate?</p>
+        <div style="flex:0 0 auto"><mw-coord points="B:1,5;B':1,3" arrow="1,5>1,3"></mw-coord></div>
+      </div>
+      <mw-reveal label="Answer"><div style="margin-top:4px;padding:11px 16px;border:1px solid #1fb6b0;border-radius:4px;background:#1fb6b01f;font-size:36px;line-height:1.3"><strong>B′ (1, 3)</strong>.</div></mw-reveal>
+    </div>
+    <div style="border:1px solid #d8d5d1;border-top:4px solid #1fb6b0;border-radius:4px;background:#ffffff;padding:18px 22px;display:flex;flex-direction:column;gap:8px">
+      <div style="font-size:36px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;color:#12807b">Last unit</div>
+      <div style="display:flex;gap:20px;align-items:flex-start;flex:1">
+        <p style="margin:0;font-size:36px;line-height:1.25;flex:1">In a coordinate list, why do we write "back to A"?</p>
+        
+      </div>
+      <mw-reveal label="Answer"><div style="margin-top:4px;padding:11px 16px;border:1px solid #1fb6b0;border-radius:4px;background:#1fb6b01f;font-size:36px;line-height:1.3">To <strong>close the shape</strong>.</div></mw-reveal>
+    </div>
+    <div style="border:1px solid #d8d5d1;border-top:4px solid #1fb6b0;border-radius:4px;background:#ffffff;padding:18px 22px;display:flex;flex-direction:column;gap:8px">
+      <div style="font-size:36px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;color:#12807b">Last term</div>
+      <div style="display:flex;gap:20px;align-items:flex-start;flex:1">
+        <p style="margin:0;font-size:36px;line-height:1.25;flex:1">What is 10% of $50?</p>
+        
+      </div>
+      <mw-reveal label="Answer"><div style="margin-top:4px;padding:11px 16px;border:1px solid #1fb6b0;border-radius:4px;background:#1fb6b01f;font-size:36px;line-height:1.3"><strong>$5</strong>.</div></mw-reveal>
+    </div>
+  </div>
+</section>
+
+<section data-label="Fluency" data-screen-label="Fluency" data-speaker-notes="Run your separate fluency routine." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 80px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:36px;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;color:#8a3fb8;border:1px solid #b06fd6;border-radius:4px;padding:8px 20px">Fluency</div>
+    <div style="font-size:36px;color:#8a857e;font-feature-settings:'tnum'">Session 5 · 02</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:76px;margin:44px 0 0;line-height:1.05">Fast, accurate, flexible</h2>
+  <div style="height:1px;background:#d8d5d1;margin:30px 0 46px"></div>
+  <div style="display:flex;gap:80px;align-items:center;flex:1">
+    <div style="flex:1;display:flex;flex-direction:column;gap:26px;font-size:36px;line-height:1.5">
+      <p style="margin:0">Short, sharp number practice — aim for <em>accuracy first</em>, then speed.</p>
+      <p style="margin:0;font-style:italic;color:#8a857e;font-size:36px">Teacher: run today's fluency routine or resource.</p>
+    </div>
+    <mw-timer minutes="{{ fluencyMinutes }}"></mw-timer>
+  </div>
+</section>
+
+<section data-label="Launch" data-screen-label="Launch" data-speaker-notes="Show a shape moved twice: it slides right, then flips across a line." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 80px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:36px;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;color:#e0522f;border:1px solid #ff7a52;border-radius:4px;padding:8px 20px">Launch</div>
+    <div style="font-size:36px;color:#8a857e;font-feature-settings:'tnum'">Session 5 · 03</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:76px;margin:44px 0 0;line-height:1.05">One move… or two?</h2>
+  <div style="height:1px;background:#d8d5d1;margin:30px 0 40px"></div>
+  <div style="display:flex;gap:70px;align-items:flex-start">
+    <div style="flex:1;display:flex;flex-direction:column;gap:28px">
+      <div style="display:flex;flex-direction:column;gap:14px;font-size:36px"><div style="display:flex;gap:18px"><span style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#ff7a52;font-feature-settings:'tnum'">1</span><span>First, it slides to the right.</span></div>
+        <div style="display:flex;gap:18px"><span style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#ff7a52;font-feature-settings:'tnum'">2</span><span>Then, it flips across a line.</span></div></div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:600;margin:0">Did this shape move in one way or more than one way? How do you know?</p>
+      <p style="margin:0;font-size:36px;font-style:italic;color:#8a857e">Turn and talk with your partner.</p>
+      <mw-reveal label="Reveal the big idea">
+        <p style="margin:0;font-size:36px;line-height:1.5;padding:22px 28px;border:1px solid #ff7a52;border-radius:4px;background:#ff7a5214">Shapes can be transformed <strong>more than once</strong> — and to describe it, we name <strong>each step in order</strong>.</p>
+      </mw-reveal>
+    </div>
+    <mw-shape type="combo"></mw-shape>
+  </div>
+</section>
+
+<section data-label="Learning Intention" data-screen-label="Learning Intention" data-speaker-notes="Unpack in student-friendly language." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 80px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:36px;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;color:#c47a12;border:1px solid #f2a324;border-radius:4px;padding:8px 20px">Learning Intention &amp; Success Criteria</div>
+    <div style="font-size:36px;color:#8a857e;font-feature-settings:'tnum'">Session 5 · 04</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:70px;margin:44px 0 0;line-height:1.15;max-width:1500px">We are learning to combine transformations to move shapes.</h2>
+  <div style="height:1px;background:#d8d5d1;margin:34px 0 44px"></div>
+  <p style="margin:0 0 26px;font-size:36px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:#c47a12">You'll know you've got it when…</p>
+  <div style="display:flex;flex-direction:column;gap:22px;font-size:37px;line-height:1.4">
+    <div style="display:flex;gap:20px;align-items:baseline"><span style="color:#f2a324;font-size:36px">☐</span><span>I can identify when more than one transformation has been used.</span></div>
+    <div style="display:flex;gap:20px;align-items:baseline"><span style="color:#f2a324;font-size:36px">☐</span><span>I can perform a sequence of transformations on a shape.</span></div>
+    <div style="display:flex;gap:20px;align-items:baseline"><span style="color:#f2a324;font-size:36px">☐</span><span>I can describe the transformations using mathematical language.</span></div>
+  </div>
+</section>
+
+<section data-label="Explicit Explanation" data-screen-label="Explicit Explanation" data-speaker-notes="Model one sequence: translate 3 right, then reflect across a vertical line. Label original, first image, final image." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:40px 90px 34px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:36px;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;color:#c47a12;border:1px solid #f2a324;border-radius:4px;padding:8px 20px">Explicit Explanation</div>
+    <div style="font-size:36px;color:#8a857e;font-feature-settings:'tnum'">Session 5 · 05</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:64px;margin:18px 0 0;line-height:1.05">Order matters</h2>
+  <div style="height:1px;background:#d8d5d1;margin:18px 0 24px"></div>
+  <div style="display:flex;gap:60px;align-items:center;flex:1">
+    <div style="flex:1;display:flex;flex-direction:column;gap:18px;font-size:36px;line-height:1.45">
+      <p style="margin:0">A shape might be <strong>translated then reflected</strong>, <strong>rotated then translated</strong>, or <strong>reflected then rotated</strong>.</p>
+      <p style="margin:0">The <strong>order matters</strong> — change the order, and the shape may finish in a different position. To describe a sequence clearly, name each transformation in order.</p>
+      <p style="margin:0;padding:20px 26px;border:1px solid #d8d5d1;border-radius:4px;background:#ffffff;font-size:36px">Why learn this? Tessellations and geometric patterns are built by <strong>repeating and combining</strong> transformations — that's where we're heading next.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;align-items:center">
+      <mw-shape type="combo" width="620"></mw-shape>
+      <p style="margin:0;font-size:36px;color:#8a857e;font-style:italic">The dotted shape shows where it started.</p>
+    </div>
+  </div>
+</section>
+
+<section data-label="Vocabulary" data-screen-label="Vocabulary" data-speaker-notes="Say each word aloud together." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 80px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:36px;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;color:#2568cc;border:1px solid #3f8ef0;border-radius:4px;padding:8px 20px">Vocabulary</div>
+    <div style="font-size:36px;color:#8a857e;font-feature-settings:'tnum'">Session 5 · 06</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:72px;margin:44px 0 0;line-height:1.05">Words mathematicians use</h2>
+  <div style="height:1px;background:#d8d5d1;margin:30px 0 46px"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:26px 60px;font-size:36px;line-height:1.45">
+    <div style="display:flex;gap:22px;align-items:baseline"><span style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#2568cc;min-width:340px">sequence</span><span>steps completed in order</span></div>
+    <div style="display:flex;gap:22px;align-items:baseline"><span style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#2568cc;min-width:340px">translation</span><span>a slide</span></div>
+    <div style="display:flex;gap:22px;align-items:baseline"><span style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#2568cc;min-width:340px">reflection</span><span>a flip</span></div>
+    <div style="display:flex;gap:22px;align-items:baseline"><span style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#2568cc;min-width:340px">rotation</span><span>a turn</span></div>
+    <div style="display:flex;gap:22px;align-items:baseline"><span style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#2568cc;min-width:340px">transformation</span><span>a way a shape moves or changes position</span></div>
+  </div>
+</section>
+
+<section data-label="Guided Practice" data-screen-label="Guided Practice" data-speaker-notes="Model the sequence, students copy with paper shapes or grid paper, naming each step in order." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 70px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:36px;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;color:#5a9420;border:1px solid #7cc23d;border-radius:4px;padding:8px 20px">Guided Practice</div>
+    <div style="font-size:36px;color:#8a857e;font-feature-settings:'tnum'">Session 5 · 07</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:68px;margin:36px 0 0;line-height:1.05">Two moves, in order</h2>
+  <div style="height:1px;background:#d8d5d1;margin:26px 0 36px"></div>
+  <div style="display:flex;gap:70px;align-items:flex-start">
+    <div style="flex:1;display:flex;flex-direction:column;gap:22px;font-size:36px;line-height:1.5">
+      <div style="display:flex;gap:18px"><span style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#7cc23d;font-feature-settings:'tnum'">1</span><span>Start with a triangle.</span></div>
+      <div style="display:flex;gap:18px"><span style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#7cc23d;font-feature-settings:'tnum'">2</span><span><strong>Translate</strong> it 3 spaces right.</span></div>
+      <div style="display:flex;gap:18px"><span style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#7cc23d;font-feature-settings:'tnum'">3</span><span><strong>Reflect</strong> it across a vertical line.</span></div>
+      <div style="display:flex;gap:18px"><span style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#7cc23d;font-feature-settings:'tnum'">4</span><span>Describe the sequence out loud, step by step.</span></div>
+      <p style="margin:10px 0 0;padding:18px 24px;border:1px solid #d8d5d1;border-radius:4px;background:#ffffff;font-size:36px">Say it like a mathematician: <em>"First the shape was translated, then it was reflected."</em></p>
+    </div>
+    <mw-drag shapes="triangle,square" width="880" height="520"></mw-drag>
+  </div>
+</section>
+
+<section data-label="Independent Practice" data-screen-label="Independent Practice" data-speaker-notes="Rove and check. Watch for students naming only the final position." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 70px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:36px;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;color:#c47a12;border:1px solid #f2a324;border-radius:4px;padding:8px 20px">Independent Practice</div>
+    <div style="font-size:36px;color:#8a857e;font-feature-settings:'tnum'">Session 5 · 08</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:68px;margin:36px 0 0;line-height:1.05">Choose your challenge</h2>
+  <div style="height:1px;background:#d8d5d1;margin:26px 0 36px"></div>
+  <div style="display:flex;gap:32px;flex:1;align-items:stretch">
+    <div style="flex:1;border:1px solid #d8d5d1;border-top:4px solid #ff6b57;border-radius:4px;padding:34px;background:#ffffff;display:flex;flex-direction:column;gap:14px">
+      <div style="font-size:36px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;color:#ff6b57">Red · Building the idea</div>
+      <p style="margin:0;font-size:36px;line-height:1.5">Use cut-out shapes to show two-step moves: slide then flip, turn then slide, flip then turn. Label each movement.</p>
+    </div>
+    <div style="flex:1;border:1px solid #d8d5d1;border-top:4px solid #f2a324;border-radius:4px;padding:34px;background:#ffffff;display:flex;flex-direction:column;gap:14px">
+      <div style="font-size:36px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;color:#c47a12">Orange · Level 6 core</div>
+      <p style="margin:0;font-size:36px;line-height:1.5">Complete transformation sequences on grid paper and describe each step using translation, reflection and rotation.</p>
+    </div>
+    <div style="flex:1;border:1px solid #d8d5d1;border-top:4px solid #7cc23d;border-radius:4px;padding:34px;background:#ffffff;display:flex;flex-direction:column;gap:14px">
+      <div style="font-size:36px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;color:#7cc23d">Green · Extender</div>
+      <p style="margin:0;font-size:36px;line-height:1.5">Create a two- or three-step transformation challenge for a partner. Can they complete it and name every step?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:center;padding-left:16px">
+      <mw-timer minutes="{{ taskMinutes }}"></mw-timer>
+    </div>
+  </div>
+</section>
+
+<section data-label="Spotlight" data-screen-label="Spotlight" data-speaker-notes="Common trap: naming where it landed without describing the steps." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 80px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:36px;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;color:#e0522f;border:1px solid #ff7a52;border-radius:4px;padding:8px 20px">Spotlight</div>
+    <div style="font-size:36px;color:#8a857e;font-feature-settings:'tnum'">Session 5 · 09</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:72px;margin:44px 0 0;line-height:1.05">Eyes up — one big idea</h2>
+  <div style="height:1px;background:#d8d5d1;margin:30px 0 46px"></div>
+  <p style="margin:0 0 30px;font-size:36px;line-height:1.55;max-width:1500px">You told me where it landed… but <em>how did it get there</em>?</p>
+  <mw-reveal label="Reveal the clarification">
+    <div style="border:1px solid #ff7a52;border-radius:4px;background:#ff7a5214;padding:36px 42px;font-size:36px;line-height:1.6;max-width:1500px">
+      <p style="margin:0">When transformations are combined, describe <strong>each step in order</strong>. The order can change the final position — <em>slide then flip</em> is not always the same as <em>flip then slide</em>.</p>
+    </div>
+  </mw-reveal>
+</section>
+
+<section data-label="Reflection" data-screen-label="Reflection" data-speaker-notes="Revisit the success criteria." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 80px;background:#fbfcff;color:#201f1d;font-family:'Lora',serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:36px;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;color:#12807b;border:1px solid #1fb6b0;border-radius:4px;padding:8px 20px">Reflection</div>
+    <div style="font-size:36px;color:#8a857e;font-feature-settings:'tnum'">Session 5 · 10</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:72px;margin:44px 0 0;line-height:1.05">How did you go?</h2>
+  <div style="height:1px;background:#d8d5d1;margin:30px 0 46px"></div>
+  <p style="margin:0 0 30px;font-size:36px;font-style:italic;color:#8a857e">Give yourself a quiet tick, cross or "nearly" for each one.</p>
+  <div style="display:flex;flex-direction:column;gap:24px;font-size:38px;line-height:1.4">
+    <div style="display:flex;gap:20px;align-items:baseline"><span style="color:#1fb6b0;font-size:36px">☐</span><span>I can identify when more than one transformation has been used.</span></div>
+    <div style="display:flex;gap:20px;align-items:baseline"><span style="color:#1fb6b0;font-size:36px">☐</span><span>I can perform a sequence of transformations on a shape.</span></div>
+    <div style="display:flex;gap:20px;align-items:baseline"><span style="color:#1fb6b0;font-size:36px">☐</span><span>I can describe the transformations using mathematical language.</span></div>
+  </div>
+</section>
+
+<section data-label="Exit Ticket" data-screen-label="Exit Ticket" data-speaker-notes="Independent evidence. Reveal answers only after collecting responses." style="box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;padding:90px 110px 70px;background:#3fa63f;color:#efe9df;font-family:'Lora',serif;position:relative;overflow:hidden">
+  <div style="position:absolute;right:40px;top:-70px;font-family:'Cormorant Garamond',serif;font-size:380px;color:rgba(255,255,255,.16);line-height:1">✦</div>
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="font-size:36px;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;color:#ffffff;border:1px solid #ffffff;border-radius:4px;padding:8px 20px">Exit Ticket</div>
+    <div style="font-size:36px;color:rgba(255,255,255,.7);font-feature-settings:'tnum'">Session 5 · 11</div>
+  </div>
+  <h2 style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:72px;margin:40px 0 0;line-height:1.05">Show what you know</h2>
+  <div style="height:1px;background:rgba(255,255,255,.5);margin:28px 0 40px"></div>
+  <div style="display:flex;gap:80px;align-items:flex-start">
+    <div style="flex:1.2;display:flex;flex-direction:column;gap:24px;font-size:36px;line-height:1.6">
+      <p style="margin:0">A shape was moved like this: it slid 4 spaces left, then it flipped across a vertical line.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;font-size:36px">
+        <div style="display:flex;gap:18px"><span style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#ffffff;font-feature-settings:'tnum'">1</span><span>What was the first transformation?</span></div>
+        <div style="display:flex;gap:18px"><span style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#ffffff;font-feature-settings:'tnum'">2</span><span>What was the second transformation?</span></div>
+        <div style="display:flex;gap:18px"><span style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#ffffff;font-feature-settings:'tnum'">3</span><span>Why is the order important?</span></div>
+      </div>
+    </div>
+    <div style="flex:1">
+      <mw-reveal dark label="Reveal the answers">
+        <div style="border:1px solid rgba(255,255,255,.55);border-radius:4px;padding:32px 38px;font-size:36px;line-height:1.7;background:rgba(0,0,0,.20)">
+          <p style="margin:0">First: a <strong>translation</strong>.<br>Second: a <strong>reflection</strong>.<br>A different order may put the shape in a <strong>different final position</strong>.</p>
+        </div>
+      </mw-reveal>
+      <p style="margin:30px 0 0;font-size:36px;color:rgba(255,255,255,.75)"><a href="Menu.dc.html" style="color:#ffffff">← Menu</a> · <a href="Session 4.dc.html" style="color:#ffffff">Session 4</a> · <a href="Session 6.dc.html" style="color:#ffffff">Next: Session 6 →</a></p>
+    </div>
+  </div>
+</section>
+
+</x-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;reviewMinutes&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:10,&quot;min&quot;:2,&quot;max&quot;:20,&quot;step&quot;:1,&quot;unit&quot;:&quot;min&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Timers&quot;},&quot;fluencyMinutes&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:5,&quot;min&quot;:2,&quot;max&quot;:15,&quot;step&quot;:1,&quot;unit&quot;:&quot;min&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Timers&quot;},&quot;taskMinutes&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:20,&quot;min&quot;:5,&quot;max&quot;:40,&quot;step&quot;:1,&quot;unit&quot;:&quot;min&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Timers&quot;}}"></script>
+</body>
+</html>
